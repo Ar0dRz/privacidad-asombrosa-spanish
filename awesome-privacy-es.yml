@@ -1,0 +1,2298 @@
+####
+# ¡Bienvenido a Awesome Privacy!    #
+# Este archivo contiene todos los datos para todas las categorías, secciones y servicios listados  #
+# Se usa para generar tanto el README.md como el sitio web, awesome-privacy.xyz #
+#    #
+# COMANDOS DE USO    #
+# `make validate` - Verifica que este archivo sea YAML válido y cumpla con el esquema    #
+# `make generate` - Genera e inserta contenido en el README.md    #
+#
+####
+# Licenciado bajo CC0-1.0 (C) Alicia Sykes <https://aliciasykes.com> 2019 - 2024 #
+####
+
+categories:
+  - name: Esenciales
+    sections:
+    ####
+    #### Gestores de Contraseñas ####
+    ####
+    - name: Gestores de Contraseñas
+      alternativeTo: ['LastPass', '1Password', 'Dashlane', 'NordPass', 'RoboForm']
+      services:
+      - name: Bitwarden
+        url: https://bitwarden.com
+        followWith: Autoalojado
+        github: bitwarden/server
+        tosdrId: 1348
+        androidApp: com.x8bit.bitwarden
+        iosApp: https://apps.apple.com/us/app/bitwarden-password-manager/id1137397744
+        subreddit: Bitwarden
+        description: |
+          Gestor de contraseñas de código abierto con todas las funciones y sincronización en la nube. Bitwarden es
+          fácil de usar con una interfaz limpia y aplicaciones cliente para escritorio, web y móvil. Ver también
+          [Vaultwarden](https://github.com/dani-garcia/vaultwarden), una implementación autoalojada en Rust del servidor
+          de Bitwarden compatible con [clientes upstream de Bitwarden](https://bitwarden.com/download/).
+
+      - name: KeePass
+        url: https://keepass.info
+        openSource: true
+        subreddit: KeePass
+        description: |
+          Gestor de contraseñas endurecido, seguro y offline. No tiene sincronización en la nube integrada,
+          considerado el [estándar de oro](https://keepass.info/ratings.html) para gestores de contraseñas seguros.
+          Clientes KeePass: [Strongbox](https://apps.apple.com/us/app/strongbox-keepass-pwsafe/id897283731)
+          *(Mac & iOS)*, [KeePassDX](https://play.google.com/store/apps/details?id=com.kunzisoft.keepass.free)
+          *(Android)*, [KeeWeb](https://keeweb.info) *(Basado en web/ autoalojado)*,
+          [KeePassXC](https://keepassxc.org) *(Windows, Mac & Linux)*, ver más clientes y extensiones KeePass en
+          [awesome-keepass](https://github.com/lgg/awesome-keepass) por @lgg.
+
+      - name: LessPass
+        url: https://lesspass.com
+        followWith: Autoalojado
+        github: lesspass/lesspass
+        description: |
+          LessPass es un poco diferente, ya que genera tus contraseñas usando un hash del nombre del sitio web,
+          tu nombre de usuario y una sola contraseña principal que reutilizas. Elimina la necesidad de almacenar o
+          sincronizar tus contraseñas. Tienen apps para todas las plataformas comunes y una CLI, pero también puedes
+          autoalojarlo.
+
+      - name: Padloc
+        url: https://padloc.app
+        github: padloc/padloc
+        androidApp: app.padloc
+        iosApp: https://apps.apple.com/us/app/padloc/id1478877043
+        description: |
+          Un gestor de contraseñas moderno y de código abierto para individuos y equipos. Hermoso,
+          intuitivo y muerto simple de usar. Apps disponibles para todas las plataformas y puedes
+          autoalojarlo también.
+
+      - name: ProtonPass
+        url: https://proton.me/pass
+        openSource: true
+        tosdrId: 491
+        androidApp: proton.android.pass
+        iosApp: https://apps.apple.com/us/app/proton-pass-password-manager/id6443490629
+        subreddit: ProtonPass
+        description: |
+          De los creadores de ProtonMail, ProtonPass es una nueva adición a su suite de
+          servicios. Tienen una colección completa de apps nativas amigables para móvil y escritorio.
+          ProtonPass es uno de los pocos proveedores "confiables" que también ofrecen un plan gratuito.
+
+      - name: Pass
+        url: https://www.passwordstore.org/
+        icon: https://www.zx2c4.com/favicon.ico
+        description: El Gestor de Contraseñas Estándar de Unix
+        openSource: true
+
+      notableMentions:
+      - name: Password Safe
+        url: https://www.pwsafe.org
+        # tosdrId: 3342
+        # iosApp: https://apps.apple.com/us/app/proton-pass-password-manager/id6443490629
+        # androidApp: com.jefftharris.passwdsafe
+        description: >
+          Un gestor de contraseñas offline y de código abierto diseñado por
+          [Bruce Schneier](https://www.schneier.com/academic/passsafe/), con aplicaciones nativas
+          para Windows, Linux, MacOS, Android e iOS, y soporte para YubiKey. La interfaz es un poco
+          anticuada, y no hay extensión oficial para navegador, lo que lo hace ligeramente menos
+          conveniente que otras opciones.
+      - name: PassBolt
+        url: https://www.passbolt.com
+        # iosApp: https://apps.apple.com/us/app/passbolt-password-manager/id1569629432
+        # androidApp: com.passbolt.mobile.android
+        description: >
+          Una buena opción para equipos. Es gratuito, de código abierto, autoalojado, extensible
+          y basado en OpenPGP. Es especialmente bueno para desarrollo y DevOps, con integraciones
+          para terminal, navegador y chat, y se puede extender fácilmente para usos personalizados,
+          desplegándose rápidamente con Docker.
+      - name: 1Password
+        url: https://1password.com
+        # tosdrId: 1572
+        # iosApp: https://apps.apple.com/us/app/1password-password-manager/id1511601750
+        # androidApp: com.onepassword.android
+        description: >
+          (propietario) Un gestor de contraseñas con todas las funciones y sincronización para múltiples plataformas.
+          Gratuito para datos autoalojados (o $3/mes alojado). Ten en cuenta que 1Password no es completamente
+          de código abierto, pero publican regularmente resultados de sus
+          [auditorías de seguridad independientes](https://support.1password.com/security-assessments),
+          y tienen una sólida reputación por divulgar y corregir vulnerabilidades de manera transparente.
+      furtherInfo: >
+        **Otros PM de Código Abierto**: [Buttercup](https://buttercup.pw), [Clipperz](https://clipperz.is),
+        [Pass](https://www.passwordstore.org), [Padloc](https://padloc.app), [TeamPass](https://teampass.net),
+        [PSONO](https://psono.com), [UPM](http://upm.sourceforge.net), [Gorilla](https://github.com/zdia/gorilla/wiki),
+        [Seahorse](https://gitlab.gnome.org/GNOME/seahorse) (para GNOME),
+        [GNOME Keyring](https://wiki.gnome.org/Projects/GnomeKeyring),
+        [KDE Wallet Manager](https://userbase.kde.org/KDE_Wallet_Manager).
+        <br /><br />
+        Si estás usando un PM obsoleto, deberías migrar a algo mantenido activamente.
+        Esto incluye: [Firefox Lockwise](https://www.mozilla.org/en-US/firefox/lockwise),
+        [Encryptr](https://spideroak.com/personal/encryptr?ref=awesome-privacyr),
+        [Mitro](https://www.mitro.co), [Rattic](https://spideroak.com/encryptr),
+        [JPasswords](http://jpws.sourceforge.net/jpasswords.html), [Passopolis](https://passopolis.com),
+        [KYPS](https://en.wikipedia.org/wiki/KYPS), [Factotum](http://man.9front.org/4/factotum).
+
+    ####
+    #### Autenticación de 2 Factores ####
+    ####
+    - name: Autenticación de 2 Factores
+      alternativeTo: ['Google Authenticator', 'Authy', 'Microsoft Authenticator', 'LastPass Authenticator', 'Duo Mobile']
+      services:
+      - name: 2FAS
+        url: https://2fas.com/
+        followWith: Android & iOS
+        github: twofas/2fas-server
+        tosdrId: 8201
+        iosApp: https://apps.apple.com/us/app/2fa-authenticator-2fas/id1217793794
+        androidApp: com.twofasapp
+        discordInvite: q4cP6qh2g5
+        icon: https://avatars.githubusercontent.com/u/18189374
+        description: |
+          App de autenticación gratuita, segura y de código abierto para iOS y Android.
+          Soporta la creación de copias de seguridad encriptadas y sincronización entre dispositivos sin necesidad de cuenta.
+
+      - name: Aegis
+        url: https://getaegis.app
+        followWith: Android
+        github: beemdevelopment/Aegis
+        tosdrId: 4076
+        androidApp: com.beemdevelopment.aegis
+        icon: https://raw.githubusercontent.com/beemdevelopment/Aegis/master/metadata/en-US/images/icon.png
+        description: |
+          App de autenticación gratuita, segura y de código abierto para Android. Tiene función de copia de seguridad/
+          restauración y una interfaz personalizable con modo oscuro.
+
+      - name: Stratum
+        url: https://stratumauth.com/
+        icon: https://stratumauth.com/img/icon.svg
+        followWith: Android
+        github: stratumauth/app
+        androidApp: com.stratumauth.app
+        description: |
+          App de autenticación de dos factores gratuita y de código abierto para Android. Cuenta con
+          copias de seguridad encriptadas, íconos, categorías y un alto nivel de personalización. También
+          tiene una app complementaria para Wear OS.
+
+      - name: Tofu
+        url: https://www.tofuauth.com
+        followWith: iOS
+        icon: https://www.tofuauth.com/images/icon.svg
+        github: iKenndac/Tofu
+        iosApp: https://apps.apple.com/us/app/tofu-authenticator/id1082229305
+        tosdrId: 5414
+        description: |
+          Una app de autenticación de dos factores fácil de usar y de código abierto diseñada específicamente
+          para iOS.
+
+      - name: Authenticator
+        url: https://mattrubin.me/authenticator
+        github: mattrubin/Authenticator
+        icon: https://i.ibb.co/dLqS8ZH/Screenshot-from-2024-02-19-20-47-48.png
+        iosApp: https://apps.apple.com/us/app/authenticator/id766157276
+        followWith: iOS
+        description: |
+          Cliente 2FA simple, nativo y de código abierto para iOS, que nunca se conecta a internet - construido por @mattrubin.me.
+
+      - name: WinAuth
+        url: https://winauth.github.io/winauth
+        github: winauth/winauth
+        icon: https://winauth.github.io/winauth/favicon.ico
+        followWith: Windows
+        description: |
+          App de autenticación de escritorio portátil y encriptada para Microsoft Windows. Con
+          funciones útiles como teclas rápidas y herramientas de seguridad adicionales, WinAuth es un
+          gran compañero para usuarios avanzados de escritorio. Es de código abierto y bien establecido (desde mediados de 2010).
+
+      - name: Authenticator GNOME
+        url: https://gitlab.gnome.org/World/Authenticator
+        icon: https://gitlab.gnome.org/World/Authenticator/-/avatar?width=48
+        openSource: true
+        followWith: Linux
+        description: |
+          Autenticador OTP basado en Rust. Tiene integración nativa con GNOME Shell. También
+          disponible a través de [flathub](https://flathub.org/apps/details/com.belmoussaoui.Authenticator).
+
+      - name: Authenticator CC
+        url: https://authenticator.cc
+        icon: https://authenticator.cc/assets/logo/logo.svg
+        github: Authenticator-Extension/Authenticator
+        followWith: Extensión de Navegador
+        description: |
+          Authenticator Extension es un cliente One-Time Password (OTP) en el navegador,
+          soporta tanto Time-Based One-Time Password (TOTP, especificado en [RFC 6238](https://tools.ietf.org/html/rfc6238))
+          como HMAC-Based One-Time Password (HOTP, especificado en [RFC 4226](https://tools.ietf.org/html/rfc4226)).
+
+      - name: Ente Auth
+        url: https://ente.io/auth/
+        icon: https://raw.githubusercontent.com/ente-io/ente/main/auth/assets/icons/auth-icon.ico
+        openSource: true
+        github: ente-io/ente
+        tosdrId: 5256
+        iosApp: https://apps.apple.com/us/app/ente-auth/id6444121398
+        androidApp: io.ente.auth
+        description: |
+          Ente Auth es una app gratuita y de código abierto que almacena y genera tokens TOTP. 
+          Puede usarse con una cuenta en línea para respaldar y sincronizar tus tokens entre dispositivos
+          (y acceder a ellos vía interfaz web) de manera segura y encriptada de extremo a extremo. 
+          También puede usarse offline en un solo dispositivo sin necesidad de cuenta.
+
+      furtherInfo: >
+        Verifica qué sitios web soportan autenticación multifactor: [2fa.directory](https://2fa.directory/)
+      notableMentions: >
+        [OTPClient](https://github.com/paolostivanin/OTPClient) *(Linux)*,
+        [gauth](https://github.com/gbraadnl/gauth) *(Autoalojado, basado en web)*,
+        [Etopa](https://play.google.com/store/apps/details?id=de.ltheinrich.etopa) *(Android)*<br>
+        Para usuarios de KeePass, [TrayTop](https://keepass.info/plugins.html#traytotp)
+        es un plugin para gestionar TOTP's - offline y compatible con Windows, Mac y Linux.
+
+    ####
+    #### Encriptación de Archivos ####
+    ####
+    - name: Encriptación de Archivos
+      alternativeTo: ['VeraCrypt', 'BitLocker', 'FileVault', 'AxCrypt', 'WinRAR']
+      services:
+      - name: VeraCrypt
+        url: https://www.veracrypt.fr
+        icon: https://veracrypt.fr/favicon.ico
+        github: veracrypt/VeraCrypt
+        description: |
+          VeraCrypt es un software de encriptación de disco de código abierto multiplataforma. Puedes usarlo
+          para encriptar un archivo o directorio específico, o un disco o partición completa. VeraCrypt es
+          increíblemente rico en funciones, con opciones de encriptación completas, pero la interfaz gráfica lo hace
+          fácil de usar. Tiene una versión CLI y una edición portátil. VeraCrypt es el sucesor de (ahora obsoleto) TrueCrypt.
+
+      - name: Cryptomator
+        url: https://cryptomator.org
+        icon: https://avatars.githubusercontent.com/u/11850518
+        github: cryptomator/cryptomator
+        tosdrId: 4403
+        iosApp: https://apps.apple.com/us/app/cryptomator/id1560822163
+        androidApp: org.cryptomator
+        description: |
+          Encriptación del lado del cliente de código abierto para archivos en la nube - Cryptomator está orientado
+          al uso junto con soluciones de respaldo en la nube, y por lo tanto preserva la estructura individual de archivos,
+          para que puedan subirse. También es fácil de usar, pero tiene menos personalizaciones técnicas para cómo se
+          encriptan los datos, comparado con VeraCrypt. Cryptomator funciona en Windows, Linux y Mac - pero también tiene
+          excelentes apps móviles.
+
+      - name: age
+        url: https://age-encryption.org
+        github: FiloSottile/age
+        icon: https://i.ibb.co/H7hHddf/logo-white.png
+        description: |
+          `age` es una herramienta CLI simple, moderna y segura para encriptación de archivos y biblioteca Go.
+          Cuenta con claves explícitas pequeñas, sin opciones de configuración y composabilidad al estilo UNIX.
+
+      - name: Picocrypt
+        github: Picocrypt/Picocrypt
+        icon: https://avatars.githubusercontent.com/u/171401041
+        description: |
+          Picocrypt es una herramienta de encriptación muy pequeña (de ahí Pico), muy simple, pero muy segura
+          que puedes usar para proteger tus archivos. Está diseñada para ser la herramienta ideal para encriptación,
+          con enfoque en seguridad, simplicidad y confiabilidad.
+
+      wordOfWarning: >
+        Donde sea posible, elige un método de encriptación multiplataforma y bien establecido,
+        para que nunca te enfrentes a no poder acceder a tus archivos con tu sistema actual.<br>
+        Aunque los métodos de encriptación bien establecidos suelen ser muy seguros,
+        si la contraseña no es fuerte, un adversario podría acceder a tus archivos
+        con una GPU lo suficientemente potente.
+        Si tu sistema está comprometido, la contraseña también podría ser robada con un keylogger u otro malware similar,
+        así que cuida de seguir buenas prácticas básicas de seguridad.
+      notableMentions:
+      - name: AES Crypt
+        url: https://www.aescrypt.com/
+        description: >
+          Una utilidad ligera y fácil para encriptación de archivos.
+          Incluye aplicaciones para Windows, Mac OS, BSD y Linux, todas interactuables a través de GUI, CLI o programáticamente
+          a través de una API (disponible para Java, C, C# y Python). Aunque está bien establecido,
+          con una reputación positiva general, ha habido algunos
+          [problemas de seguridad](https://www.reddit.com/r/privacytoolsIO/comments/b7riov/aes_crypt_security_audit_1_serious_issue_found/)
+          planteados recientemente.
+
+      - name: CryptSetup
+        url: https://gitlab.com/cryptsetup/cryptsetup
+        description: >
+          Es una capa conveniente para usar sobre [dm-crypt](https://wiki.archlinux.org/index.php/Dm-crypt).
+          [EncFS](https://github.com/vgough/encfs) es un módulo de encriptación de archivos basado en archivos multiplataforma,
+          para usar dentro de directorios locales de usuario. [geli](https://www.freebsd.org/cgi/man.cgi?query=geli&sektion=8)
+          es un subsistema de encriptación de disco incluido con FreeBSD.
+
+      - name: BitLocker
+        url: https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview
+        description: >
+          Es popular entre usuarios de Microsoft Windows y empresas, y proporciona encriptación de disco completa rápida,
+          eficiente y (si se configura correctamente) razonablemente segura.
+          Sin embargo, no es de código abierto, tiene pobre compatibilidad con otros sistemas operativos,
+          y tiene algunos [defectos dudosos](https://www.diskcryptor.org/why-not-bitlocker/),
+          que podrían llevar a que tu sistema sea comprometido. Similarmente, [FileVault](https://support.apple.com/en-us/HT204837)
+          de Apple en MacOS es fácil y seguro, pero nuevamente, el código fuente es propietario.
+
+      - name: DiskCryptor
+        url: https://www.diskcryptor.org/
+        description: |
+          Solución de encriptación de archivos y volúmenes de código abierto solo para Windows,
+          que hace una buena alternativa a BitLocker.
+
+    ####
+    #### Navegadores ####
+    ####
+    - name: Navegadores
+      alternativeTo: ['Chrome', 'Safari', 'Firefox', 'Edge', 'Opera']
+      services:
+      - name: LibreWolf
+        icon: https://librewolf.net/icon.svg
+        url: https://librewolf.net
+        openSource: true
+        tosdrId: 6389
+        description: |
+          LibreWolf es un fork independiente de Firefox que busca proporcionar mejores configuraciones predeterminadas
+          para mejorar la privacidad, seguridad y libertad del usuario. La telemetría de Mozilla está deshabilitada,
+          los lazos con Google (Safe Browsing) se cortan, el bloqueador de contenido
+          [uBlock Origin](https://github.com/gorhill/uBlock) está incluido y las configuraciones de privacidad
+          predeterminadas están guiadas por investigaciones como el
+          [proyecto Arkenfox](https://github.com/arkenfox/user.js/).
+
+      - name: Brave Browser
+        url: https://brave.com
+        icon: https://brave.com/static-assets/images/brave-logo-sans-text.svg
+        github: brave/brave-browser
+        tosdrId: 1487
+        description: |
+          Brave Browser, actualmente uno de los navegadores privados más populares - proporciona
+          velocidad, seguridad y privacidad bloqueando rastreadores con una interfaz limpia pero con todas las funciones.
+          También te paga en [tokens BAT](https://basicattentiontoken.org/) por usarlo.
+          Brave también tiene Tor integrado, cuando abres una pestaña privada/ventana.
+
+      - name: Firefox
+        url: https://www.mozilla.org/firefox
+        icon: https://www.mozilla.org/media/protocol/img/logos/firefox/logo.fedb52c912d6.svg
+        openSource: true
+        tosdrId: 188
+        description: |
+          Significativamente más privado, y ofrece algunas funciones de privacidad ingeniosas que Chrome,
+          Internet Explorer y Safari. Después de instalar, hay un par de pequeños ajustes que necesitarás hacer,
+          para asegurar Firefox. Para una configuración exhaustiva, ver
+          [user.js de @arkenfox](https://github.com/arkenfox/user.js/). También puedes seguir
+          una de estas guías de: [Restore Privacy](https://restoreprivacy.com/firefox-privacy/)
+          o [12Bytes](https://codeberg.org/12bytes/firefox-config-guide).
+
+      - name: Tor Browser
+        url: https://www.torproject.org/
+        icon: https://www.torproject.org/static/images/favicon/favicon.ico
+        openSource: true
+        tosdrId: 2845
+        androidApp: org.torproject.torbrowser
+        description: |
+          Tor proporciona una capa extra de anonimato, encriptando cada una de tus solicitudes, luego
+          enrutándola a través de varios nodos, haciendo casi imposible rastrearte por tu ISP/proveedor.
+          Hace que la navegación diaria sea un poco más lenta, y algunos sitios podrían no funcionar correctamente.
+          Como con todo, hay [compromisos](https://github.com/Lissy93/personal-security-checklist/issues/19).
+
+      - name: Cromite
+        url: https://www.cromite.org/
+        icon: https://camo.githubusercontent.com/fc003f5ff33669908e7b929692fdbb8d10ec7df5ffa5e02e4d9becf405dd7804/68747470733a2f2f77772e63726f6d6974652e6f72672f6170705f69636f6e2e706e67
+        github: uazo/cromite
+        description: |
+          Cromite es un fork de Chromium basado en Bromite con soporte integrado para bloqueo de anuncios y un enfoque en la privacidad.
+
+      notableMentions: >
+        **Navegadores Móviles**: [Mull](https://f-droid.org/en/packages/us.spotco.fennec_dos/) Fork endurecido de FF-Fenix (Android),
+        [Firefox Focus](https://support.mozilla.org/en-US/kb/focus) (Android/ iOS),
+        [DuckDuckGo Browser](https://help.duckduckgo.com/duckduckgo-help-pages/mobile/ios/) (Android/ iOS),
+        [Orbot](https://guardianproject.info/apps/orbot/) + [Tor](https://www.torproject.org/download/#android) (Android),
+        [Onion Browser](https://onionbrowser.com/) (iOS)<br><br>
+        **Escritorio Adicional**: [Nyxt](https://nyxt.atlas.engineer/), [WaterFox](https://www.waterfox.net), [Epic Privacy Browser](https://www.epicbrowser.com), [PaleMoon](https://www.palemoon.org), [Iridium](https://iridiumbrowser.de/), [Sea Monkey](https://www.seamonkey-project.org/), [Ungoogled-Chromium](https://github.com/Eloston/ungoogled-chromium), [Basilisk Browser](https://www.basilisk-browser.org/) y [IceCat](https://www.gnu.org/software/gnuzilla/)
+        12Bytes también mantiene una lista de extensiones de privacidad y seguridad [extensions](https://12bytes.org/articles/tech/firefox/firefox-extensions-my-picks/)
+      wordOfWarning: >
+        Se descubren y parchean nuevas vulnerabilidades todo el tiempo - usa un navegador
+        que se mantenga activamente, para recibir actualizaciones críticas de seguridad.<br>
+        Incluso navegadores que respetan la privacidad, a menudo no tienen las mejores opciones de privacidad habilitadas por defecto.
+        Después de instalar, verifica las configuraciones de privacidad y seguridad, y actualiza la configuración a
+        algo con lo que te sientas cómodo. 12Bytes mantiene una guía completa sobre
+        [Configuración de Firefox para Privacidad y Rendimiento](https://codeberg.org/12bytes/firefox-config-guide).
+
+    ####
+    #### Motores de Búsqueda ####
+    ####
+    - name: Motores de Búsqueda
+      alternativeTo: ['Google', 'Bing', 'Yahoo', 'Baidu', 'Yandex']
+      services:
+      - name: DuckDuckGo
+        url: https://duckduckgo.com
+        icon: https://duckduckgo.com/favicon.png
+        openSource: true
+        tosdrId: 222
+        iosApp: https://apps.apple.com/us/app/duckduckgo-private-browser/id663592361
+        androidApp: com.duckduckgo.mobile.android
+        subreddit: duckduckgo
+        description: |
+          DuckDuckGo es un motor de búsqueda muy amigable con el usuario, rápido y seguro. Es totalmente
+          privado, sin rastreadores, cookies ni anuncios. También es altamente personalizable, con
+          modo oscuro, muchos idiomas y funciones. Incluso tienen una URL [.onion](https://3g2upl4pq6kufc4m.onion)
+          para usar con Tor y una [versión sin Javascript](https://duckduckgo.com/html/).
+
+      - name: Qwant
+        url: https://www.qwant.com
+        icon: https://avatars.githubusercontent.com/u/1692504
+        iosApp: https://apps.apple.com/us/app/qwant-private-search/id924470452
+        androidApp: com.qwant.liberty
+        subreddit: Qwant
+        tosdrId: 527
+        description: |
+          Servicio francés que agrega resultados de Bing, con sus propios resultados. Qwant no
+          planta cookies, ni tiene rastreadores o publicidad de terceros. Devuelve resultados de búsqueda
+          no sesgados, sin promociones. Qwant tiene una interfaz única, pero agradable.
+
+      - name: Startpage
+        url: https://www.startpage.com
+        icon: https://www.startpage.com/favicon.ico
+        tosdrId: 418
+        openSource: false
+        description: |
+          Motor de búsqueda holandés que busca en Google y muestra los resultados (ligeramente
+          reorganizados). Tiene varias configuraciones que mejoran la privacidad durante el uso
+          (no es de código abierto).
+
+      - name: Brave Search
+        url: https://search.brave.com/
+        icon: https://i.ibb.co/GH1n4wf/Brave-Search-Icon.png
+        description: >-
+          Brave Search es un motor de búsqueda enfocado en la privacidad que no rastrea a los usuarios ni
+          sus búsquedas, no usa algoritmos secretos ni perfiles de usuario, y se basa en su propio índice de búsqueda.
+        github: brave/brave-browser
+        tosdrId: 1487
+        iosApp: https://apps.apple.com/us/app/brave-private-browser-adblock/id1052879175
+        androidApp: com.brave.browser
+        discordInvite: ''
+        subreddit: brave_browser
+        openSource: true
+        securityAudited: true
+        acceptsCrypto: false
+
+      - name: Mojeek
+        url: https://mojeek.com
+        icon: https://www.mojeek.com/favicon.png
+        openSource: false
+        tosdrId: 2432
+        iosApp: https://apps.apple.com/gb/app/mojeek/id1505807785
+        androidApp: mojeek.app
+        subreddit: mojeek
+        description: |
+          Motor de búsqueda británico que proporciona resultados independientes y no sesgados usando
+          su propio rastreador. Tiene una política de cero rastreo (no es de código abierto).
+
+      notableMentions:
+      - name: MetaGear
+        url: https://metager.org
+      - name: YaCy
+        url: https://yacy.net
+      - name: Searx
+        url: https://github.com/searxng/searxng
+        description: >
+          Motores de búsqueda autoalojables que usan los resultados de múltiples otros
+          motores (como Google y Bing) al mismo tiempo. Son de código abierto
+          y autoalojables, aunque usar una [instancia pública](https://searx.space)
+          tiene el beneficio de no singularizar tus consultas a los motores usados.
+          Un fork del original [Searx](https://searx.github.io/searx/).
+
+  - name: Comunicación
+    sections:
+    ####
+    #### Mensajería Encriptada ####
+    ####
+    - name: Mensajería Encriptada
+      alternativeTo: ['whatsapp', 'facebook messenger', 'wechat', 'telegram', 'snapchat', 'viber', 'line', 'discord']
+      services:
+      - name: Signal
+        url: https://signal.org
+        openSource: true
+        github: signalapp/Signal-Server
+        tosdrId: 528
+        iosApp: https://apps.apple.com/us/app/signal-private-messenger/id874139669
+        androidApp: org.thoughtcrime.securesms
+        icon: https://signal.org/assets/images/favicon/android-chrome-192x192.png
+        subreddit: signal
+        description: |
+          Probablemente una de las apps de mensajería privada más populares y seguras que combina
+          encriptación fuerte (ver [Protocolo Signal](https://en.wikipedia.org/wiki/Signal_Protocol))
+          con una interfaz simple y muchas funciones. Es ampliamente usada en todo el mundo, y
+          fácil de usar, funcionando similar a WhatsApp - con mensajería instantánea, recibos de lectura,
+          soporte para adjuntos multimedia y permite llamadas de voz y video de alta calidad.
+          Es multiplataforma, de código abierto y totalmente gratuita. Signal es
+          [recomendado](https://twitter.com/Snowden/status/661313394906161152)
+          por Edward Snowden, y es una solución perfecta para la mayoría de usuarios.
+
+      - name: Session
+        url: https://getsession.org
+        icon: https://getsession.org/favicon.ico
+        openSource: true
+        tosdrId: 3015
+        github: oxen-io/lokinet
+        subreddit: Session_Messenger
+        androidApp: network.loki.messenger
+        iosApp: https://apps.apple.com/us/app/session-private-messenger/id1470168868
+        description: |
+          Session es un fork de Signal, sin embargo, a diferencia de Signal, no requiere un número de móvil
+          (ni ningún otro dato personal) para registrarse, en su lugar cada usuario es identificado
+          por una clave pública. Es descentralizado, con servidores administrados por la comunidad
+          a través de [Loki Net](https://loki.network), los mensajes se encriptan y enrutan a través
+          de varios de estos nodos. Todas las comunicaciones son E2E encriptadas, y no hay
+          metadatos.
+
+      - name: SimpleX
+        url: https://simplex.chat/
+        openSource: true
+        github: simplex-chat/simplex-chat
+        tosdrId: 7638
+        iosApp: https://apps.apple.com/us/app/simplex-chat-secure-messenger/id1605771084
+        androidApp: chat.simplex.app
+        icon: https://github.com/simplex-chat/simplex-chat/blob/stable/media-logos/simplex-symbol-light.png
+        subreddit: SimpleXChat
+        description: |
+          SimpleX está ganando popularidad como una app de mensajería segura y privada conocida
+          por su robusto protocolo de encriptación sin IDs de usuario ni números de teléfono, lo que mejora tu privacidad.    
+          SimpleX ofrece mensajería instantánea, soporta adjuntos multimedia y llamadas de voz y video.
+          Además, es multiplataforma, de código abierto y completamente gratuita, alineándose con las preferencias
+          modernas de conveniencia, seguridad y accesibilidad. 
+          Aprende más sobre la [Política de Seguridad](https://simplex.chat/security/).
+
+      - name: XMPP
+        url: https://xmpp.org
+        icon: https://xmpp.org/favicon.ico
+        openSource: true
+        github: xsf/xmpp.org
+        description: |
+          XMPP, también conocido como Jabber, es un estándar abierto para mensajería descentralizada que
+          ha sido ampliamente usado por décadas. De hecho, ha sido la base sobre la que se construyeron
+          WhatsApp, el Chat de Facebook y Talk de Google, pero estas compañías (eventualmente) eligieron
+          eliminar la interoperabilidad con otros servidores. Clientes XMPP prominentes soportan [OMEMO end-to-end encryption](https://en.wikipedia.org/wiki/OMEMO),
+          que se basa en el [Algoritmo Double Ratchet](https://en.wikipedia.org/wiki/Double_Ratchet_Algorithm)
+          usado en Signal. Para más información práctica y registrar una cuenta,
+          puedes visitar [JoinJabber](https://joinjabber.org).
+
+      - name: Matrix
+        url: https://matrix.org
+        icon: https://matrix.org/assets/favicon.ico
+        openSource: true
+        tosdrId: 2455
+        github: matrix-org/dendrite
+        description: |
+          Matrix es una red abierta descentralizada para comunicaciones seguras, con E2E
+          encriptación con Olm y Megolm. Junto con el cliente [Element](https://element.io/),
+          soporta llamadas VOIP + video y mensajería instantánea + chats grupales. Dado que Matrix tiene
+          una especificación abierta y una API RESTful HTTP/JSON pragmática simple, facilita
+          la integración con IDs de terceros existentes para autenticar y descubrir usuarios, así
+          como construir apps sobre ella.
+      notableMentions: 
+      - name: Chat Secure
+        url: https://chatsecure.org
+      - name: KeyBase
+        url: https://keybase.io/
+        description: >
+          Permite chat en tiempo real encriptado, chats grupales, y compartir archivos públicos y
+          privados. También tiene funciones útiles para probar identidades sociales criptográficamente,
+          y facilita firmar, encriptar y desencriptar mensajes con PGP.
+          Sin embargo, desde que fue [adquirido por Zoom](https://keybase.io/blog/keybase-joins-zoom) en 2020,
+          ya no recibe actualizaciones regulares.
+      - name: OpenPGP
+        url: https://www.openpgp.org
+        description: >
+          Puede usarse sobre redes de chat existentes (como email o foros).
+          Proporciona privacidad criptográfica y autenticación, PGP se usa para encriptar mensajes.<br />
+          **Nota/ Problemas con PGP**  PGP [no es fácil](https://restoreprivacy.com/let-pgp-die/)
+          de usar para principiantes, y podría llevar a errores humanos/ equivocaciones,
+          lo que sería mucho peor que usar un sistema alternativo más simple.
+          No uses [IDs de clave de 32 bits](https://evil32.com/) - son demasiado cortos para ser seguros.
+          También se han encontrado vulnerabilidades en OpenPGP y S/MIME,
+          definidas en [EFAIL](https://efail.de/), así que aunque se considera
+          seguro para uso general, para chat general, podría ser mejor
+          usar una app de mensajería o email encriptada en su lugar.
+      wordOfWarning: >
+        Muchas apps de mensajería afirman ser seguras, pero si no son de código abierto,
+        esto no puede verificarse - y **no deberían confiarse**.
+        Esto aplica a [Telegram](https://telegram.org), [Threema](https://threema.ch),
+        [Cypher](https://www.goldenfrog.com/cyphr), [Wickr](https://wickr.com/),
+        [Silent Phone](https://www.silentcircle.com/products-and-solutions/silent-phone/)
+        y [Viber](https://www.viber.com/), por nombrar algunos - estas apps no deberían
+        usarse para comunicar datos sensibles.
+        [Wire](https://wire.com/) también ha sido removido, debido a
+        una [adquisición reciente](https://blog.privacytools.io/delisting-wire/).
+
+    ####
+    #### Mensajería P2P ####
+    ####
+    - name: Mensajería P2P
+      intro: >
+        Con redes [Peer-to-Peer](https://en.wikipedia.org/wiki/Peer-to-peer),
+        no hay servidor central, así que no hay nada que pueda ser allanado,
+        apagado o forzado a entregar datos. Hay redes P2P disponibles
+        que son de código abierto, E2E encriptadas, enrutadas a través de servicios Tor,
+        totalmente anónimas y operan sin recolección de metadatos.
+      services:
+      - name: Oxen
+        url: https://oxen.io/
+        github: oxen-io/lokinet
+        tosdrId: 6622
+        icon: https://oxen.io/favicon.ico
+        description: |
+          Oxen (anteriormente Loki) es un conjunto de herramientas de código abierto que permiten a los usuarios transar
+          y comunicarse de manera anónima y privada, a través de una red descentralizada, encriptada,
+          basada en onion.
+          Session es una app de escritorio y móvil que usa estos protocolos de enrutamiento privados para
+          asegurar mensajes, medios y metadatos.
+
+      - name: Briar
+        url: https://briarproject.org
+        icon: https://briarproject.org/img/briar_logo_circle.png
+        androidApp: org.briarproject.briar.android
+        openSource: true
+        tosdrId: 2559
+        description: |
+          App para Android basada en Tor para mensajería P2P encriptada y foros. Donde el contenido se
+          almacena de manera segura en tu dispositivo (no en la nube). También permite conectarte
+          directamente con contactos cercanos, sin acceso a internet (usando Bluetooth o WiFi).
+
+      - name: Ricochet Refresh
+        url: https://www.ricochetrefresh.net
+        openSource: true
+        github: blueprint-freespeech/ricochet-refresh
+        icon: https://www.ricochetrefresh.net/apple-touch-icon.png
+        followWith: Escritorio
+        description: |
+          Mensajero instantáneo de escritorio, que usa la red Tor para reunirse con tus
+          contactos sin revelar tu identidad, ubicación/IP o metadatos. No hay servidores para monitorear, censurar o hackear,
+          así que Ricochet es seguro, automático y fácil de usar.
+
+      - name: Jami
+        url: https://jami.net
+        icon: https://jami.net/assets/images/favicon/apple-touch-icon-57x57.png
+        github: savoirfairelinux/jami-project
+        iosApp: https://apps.apple.com/ca/app/jami/id1306951055
+        androidApp: cx.ring
+        description: |
+          Red de chat encriptada P2P con apps cliente GNU multiplataforma. Jami soporta
+          llamadas de audio y video, compartir pantalla, hospedaje de conferencias y mensajería instantánea.
+
+      - name: Tox & qTox client
+        url: https://tox.chat
+        icon: https://tox.chat/theme/img/favicon.ico
+        openSource: true
+        subreddit: projecttox
+        followWith: Escritorio
+        description: |
+          Red de chat distribuida, encriptada y de código abierto, con clientes para escritorio y
+          móvil - ver [clientes soportados](https://tox.chat/clients.html). Código claramente documentado
+          y múltiples enlaces de lenguaje facilitan a los desarrolladores integrar con Tox.
+      notableMentions:
+      - name: Cwtch
+        url: https://cwtch.im
+      - name: BitMessage
+        url: https://github.com/Bitmessage/PyBitmessage
+      - name: RetroShare
+        url: https://retroshare.cc
+
+    ####
+    #### Email Encriptado ####
+    ####
+    - name: Email Encriptado
+      alternativeTo: ['gmail', 'outlook', 'yahoo mail', 'icloud mail', 'aol mail', 'zoho mail']
+      intro: >
+        El email no es seguro - tus mensajes pueden ser fácilmente interceptados y leídos.
+        Las corporaciones escanean el contenido de tu correo para construir un perfil tuyo,
+        ya sea para mostrarte anuncios dirigidos o venderlo a terceros.
+        A través del [Programa Prism](https://en.wikipedia.org/wiki/PRISM_(surveillance_program)),
+        el gobierno también tiene acceso completo a tus emails (si no están encriptados de extremo a extremo) -
+        esto aplica a Gmail, Outlook Mail, Yahoo Mail, GMX, ZoHo, iCloud, AOL y más.<br><br>
+        Para una comparación más detallada de proveedores de email, ver
+        [email-comparison.as93.net](https://email-comparison.as93.net/)
+      services:
+      - name: ProtonMail
+        url: https://protonmail.com
+        icon: https://proton.me/favicons/android-chrome-192x192.png
+        openSource: false
+        github: ProtonMail/WebClients
+        tosdrId: 491
+        androidApp: ch.protonmail.android
+        iosApp: https://apps.apple.com/us/app/proton-mail-encrypted-email/id979659905
+        subreddit: ProtonMail
+        description: |
+          Un servicio de email anónimo encriptado de extremo a extremo. ProtonMail tiene una
+          interfaz moderna fácil de usar y personalizable, así como apps móviles nativas rápidas y seguras.
+          ProtonMail tiene todas las funciones que esperarías de un servicio de email moderno y se basa en simplicidad
+          sin sacrificar seguridad. Tiene un plan gratuito o una opción premium para usar dominios personalizados (desde $5/mes).
+          ProtonMail no requiere información personal identificable para registrarse, tienen un servidor [.onion](https://protonirockerxow.onion)
+          para acceso vía Tor, y aceptan pagos anónimos: BTC y efectivo (así como tarjeta de crédito y PayPal normales).
+      - name: Tuta
+        icon: https://tuta.com/resources/favicon/logo-favicon.svg
+        openSource: true
+        github: tutao/tutanota
+        tosdrId: 157
+        url: https://tuta.com
+        subreddit: tutanota
+        androidApp: de.tutao.tutanota
+        iosApp: https://apps.apple.com/us/app/encrypted-email-tuta/id922429609
+        description: |
+          Servicio de email gratuito y de código abierto basado en Alemania. Tiene una interfaz básica intuitiva,
+          apps móviles seguras nativas y clientes de email de escritorio, registro anónimo y un calendario encriptado. Tuta tiene un
+          plan completo gratuito y planes de suscripción premium que permiten
+          dominios personalizados (desde $3/mes). Tuta
+          [no usa OpenPGP](https://tuta.com/blog/posts/differences-email-encryption/)
+          como otros proveedores de email encriptado, en su lugar usan un método estandarizado híbrido
+          consistente en algoritmos simétricos y asimétricos (con AES256, y RSA 2048 
+          o ECC (x25519) y Kyber-1024). Esto causa problemas de compatibilidad al comunicarse con contactos
+          usando PGP. Pero permite encriptar mucho más de los datos de cabecera (cuerpo,
+          adjuntos, líneas de asunto y nombres de remitentes, etc.) que los proveedores PGP no pueden hacer. Las actualizaciones recientes
+          al algoritmo de encriptación de Tuta hacen que los datos almacenados y enviados con su servicio sean seguros contra ataques 
+          planteados por computadoras cuánticas.
+      - name: Forward Email
+        url: https://forwardemail.net
+        icon: https://forwardemail.net/img/android-chrome-192x192.png
+        github: forwardemail/free-email-forwarding
+        openSource: true
+        description: |
+          Un servicio de email encriptado, enfocado en privacidad y de código abierto que soporta SMTP, IMAP y acceso API.
+      - name: Mailfence
+        url: https://mailfence.com?src=digitald
+        icon: https://mailfence.com/c/mailfence/images/favicon/android-chrome-192x192.png
+        openSource: false
+        tosdrId: 1694
+        subreddit: Mailfence
+        androidApp: com.contactoffice.mailfence
+        iosApp: https://apps.apple.com/us/app/mailfence/id1628808776
+        description: |
+          Mailfence soporta OpenPGP para que puedas intercambiar claves de encriptación manualmente
+          independientemente de los servidores de Mailfence, poniéndote en control total. Mailfence
+          tiene una interfaz simple, similar a la de Outlook, y viene con calendario, libreta de direcciones y archivos integrados.
+          Todas las configuraciones de email son altamente personalizables, pero claras y fáciles de usar. El registro no es anónimo,
+          ya que se requiere tu nombre y dirección de email previa. Hay un plan completamente funcional gratuito, o puedes
+          pagar por premium y usar un dominio personalizado ($2.50/mes, o $7.50/mes para 5
+          dominios), donde se acepta Bitcoin, LiteCoin o tarjeta de crédito.
+      - name: MailBox.org
+        url: https://mailbox.org
+        icon: https://i.ibb.co/zJtHBTZ/mailfence.png
+        openSource: false
+        tosdrId: 1517
+        subreddit: Mailbox_org
+        description: |
+          Un proveedor de email seguro basado en Berlín, ecológico. No hay plan gratuito, el
+          servicio estándar cuesta €12/año. Puedes usar tu propio dominio, con la opción de
+          un [alias catch-all](https://kb.mailbox.org/display/MBOKBEN/Using+catch-all+alias+with+own+domain).
+          Proporcionan buena seguridad de cuenta y encriptación de email, con OpenPGP, así como
+          almacenamiento encriptado. No hay app dedicada, pero funciona bien con cualquier cliente de email estándar con SSL.
+          Actualmente no hay opción de pago anónimo.
+      notableMentions:
+      - name: HushMail
+        url: https://www.hushmail.com
+      - name: Soverin
+        url: https://soverin.net
+      - name: StartMail
+        url: https://www.startmail.com
+      - name: Posteo
+        url: https://posteo.de
+      - name: Disroot
+        url: https://disroot.org/en
+      wordOfWarning: |
+        - Al usar una tecnología de encriptación de extremo a extremo como OpenPGP, algunos metadatos
+        en la cabecera del email no se encriptarán.
+        - OpenPGP tampoco soporta Forward secrecy, lo que significa que si tu clave privada o la del destinatario
+        es robada alguna vez, todos los mensajes previos encriptados con ella serán expuestos. Debes tener gran cuidado
+        para mantener seguras tus claves privadas.
+
+    ####
+    #### Clientes de Email ####
+    ####
+    - name: Clientes de Email
+      alternativeTo:  ['microsoft outlook', 'apple mail', 'thunderbird', 'em client', 'mailbird', 'postbox']
+      intro: >
+        Los clientes de email son los programas usados para interactuar con el servidor de email.
+        Para email alojado, las interfaces web y móviles proporcionadas por tu servicio de email
+        suelen ser adecuadas, y podrían ser la opción más segura.
+        Para email autoalojado, necesitarás instalar y configurar clientes de email para web, escritorio o móvil.
+        Un beneficio de usar un cliente IMAP es que siempre tendrás una copia de seguridad offline de todos los mensajes de email
+        (que luego pueden encriptarse y archivarse), y muchas aplicaciones te permiten agregar múltiples buzones
+        para conveniencia. Los clientes de email de escritorio no son vulnerables a los ataques comunes de navegador que sus contrapartes web sí lo son.
+      services:
+      - name: Mozilla Thunderbird
+        url: https://www.thunderbird.net
+        icon: https://www.thunderbird.net/media/img/thunderbird/ios-icon-180.png
+        subreddit: Thunderbird
+        openSource: true
+        tosdrId: 3365
+        description: |
+          Aplicación de email gratuita y de código abierto desarrollada y respaldada por Mozilla - es segura,
+          privada, fácil y personalizable. A partir de V 78.2.1, la encriptación está integrada, y la
+          extensión [TorBirdy](https://trac.torproject.org/projects/tor/wiki/torbirdy) enruta
+          todo el tráfico a través de la red Tor. Forks como
+          [Betterbird](https://github.com/Betterbird/thunderbird-patches) podrían agregar funciones adicionales.
+
+      - name: eM Client
+        url: https://www.emclient.com
+        icon: https://www.emclient.com/favicon.ico
+        tosdrId: 432
+        androidApp: com.emclient.mailclient
+        iosApp: https://apps.apple.com/us/app/em-client/id1561166404
+        description: |
+          Cliente de email basado en productividad, para Windows y MacOS. eM Client tiene una interfaz de usuario limpia,
+          rendimiento rápido y buena compatibilidad. Hay una versión paga, con algunas funciones útiles, incluyendo posponer emails entrantes,
+          vigilar respuestas para un hilo específico, traducción de mensajes, enviar después, y Calendario, Tareas,
+          Contactos y Notas integrados. Nota, eM Client es propietario, no de código abierto.
+
+      - name: SnappyMail
+        url: https://snappymail.eu
+        icon: https://snappymail.eu/static/img/logo-256x256.png
+        github: the-djmaze/snappymail
+        description: |
+          Cliente de email web simple, moderno y rápido. Es un fork solo IMAP de
+          [RainLoop](http://www.rainloop.net) que mitiga una severa
+          [vulnerabilidad de RainLoop](https://thehackernews.com/2022/04/unpatched-bug-in-rainloop-webmail-could.html)
+          y agrega varias nuevas [funciones](https://snappymail.eu/comparison).
+
+      - name: RoundCube
+        url: https://roundcube.net
+        icon: https://roundcube.net/images/roundcube_logo_icon.svg
+        github: roundcube/roundcubemail
+        description: |
+          Cliente IMAP multilingüe basado en navegador con una interfaz de usuario similar a una aplicación. Proporciona
+          toda la funcionalidad que esperarías de un cliente de email, incluyendo soporte MIME,
+          libreta de direcciones, manipulación de carpetas, búsqueda de mensajes y corrección ortográfica.
+
+      - name: FairEmail
+        url: https://email.faircode.eu
+        icon: https://raw.githubusercontent.com/M66B/FairEmail/master/app/src/main/ic_launcher-web.png
+        github: M66B/FairEmail
+        androidApp: eu.faircode.email
+        description: |
+          Cliente de email de código abierto, con todas las funciones y fácil para Android. Soporta cuentas ilimitadas
+          y direcciones de email con la opción de una bandeja de entrada unificada. Interfaz de usuario limpia,
+          con opción de modo oscuro, es también muy ligero y consume uso mínimo de datos.
+
+      - name: K-9 Mail
+        url: https://k9mail.app
+        icon: https://k9mail.app/assets/img/k9-logo.svg
+        github: thunderbird/thunderbird-android
+        tosdrId: 3624
+        androidApp: com.fsck.k9
+        description: |
+          K-9 (o Thunderbird para Android) es de código abierto,
+          muy bien soportado y confiable - k9 ha existido casi tanto como Android mismo! Soporta múltiples cuentas, búsqueda, email push IMAP,
+          sincronización multi-carpeta, marcado, archivo, firmas, BCC-self, PGP/MIME y más. Instala
+          OpenKeychain junto a él, para encriptar/desencriptar emails usando OpenPGP.
+
+      wordOfWarning: >
+        Una desventaja de los clientes de email es que muchos no soportan 2FA,
+        así que es importante mantener tu dispositivo seguro y encriptado.
+
+    ####
+    #### Reenvío de Email ####
+    ####
+    - name: Reenvío de Email
+      intro: >
+        Revelar tu dirección de email real en línea puede ponerte en riesgo.
+        El aliasing de email permite que los mensajes enviados a [cualquiercosa]@mi-dominio.com lleguen a tu bandeja principal.
+        Esto protege tu dirección de email real de ser revelada.
+        Los aliases se generan automáticamente la primera vez que se usan.
+        Este enfoque te permite identificar qué proveedor filtró tu dirección de email,
+        y bloquear un alias con 1 clic.
+      services:
+      - name: Addy
+        url: https://addy.io
+        icon: https://addy.io/apple-touch-icon.png
+        github: anonaddy/anonaddy
+        tosdrId: 2220
+        iosApp: https://apps.apple.com/us/app/addymanager/id1547461270
+        androidApp: com.khalidwar.anonaddy
+        description: |
+          Un servicio de reenvío de email anónimo de código abierto, que te permite
+          crear aliases de email ilimitados. Tiene un plan gratuito.
+
+      - name: 33Mail
+        url: http://33mail.com
+        icon: https://33mail.com/favicon.ico
+        openSource: false
+        tosdrId: 8301
+        description: |
+          Un servicio de aliasing de larga data. Además de recibir, 33Mail también te permite responder
+          a direcciones reenviadas de manera anónima. Plan gratuito, así como plan Premium ($1/mes)
+          si quieres usar un dominio personalizado. Nota que 33Mail usa Google Analytics.
+
+      - name: SimpleLogin
+        url: https://simplelogin.io
+        openSource: true
+        icon: https://simplelogin.io/favicon.ico
+        tosdrId: 2552
+        androidApp: io.simplelogin.android
+        iosApp: https://apps.apple.com/us/app/simplelogin-email-alias/id1494359858
+        description: |
+          Servicio de alias completamente de código abierto (ver en [GitHub](https://github.com/simple-login)) con muchas funciones adicionales.
+          Puede autoalojarse, o la versión gestionada tiene un plan gratuito, así como opción premium alojada ($2.99/mes) para usar dominios personalizados.
+
+      - name: Firefox Private Relay
+        url: https://relay.firefox.com
+        icon: https://relay.firefox.com/favicon.svg
+        openSource: true
+        github: mozilla/fx-private-relay
+        tosdrId: 4158
+        description: |
+          Desarrollado y gestionado por Mozilla, Relay es un addon de Firefox que te permite hacer un
+          alias de email con 1 clic, y tener todos los mensajes reenviados a tu email personal.
+          Relay es totalmente gratuito de usar, y muy accesible para usuarios menos experimentados, pero también
+          [de código abierto](https://github.com/mozilla/fx-private-relay), y capaz de autoalojarse
+          para uso avanzado.
+
+      - name: ForwardEmail
+        url: https://forwardemail.net
+        icon: https://forwardemail.net/img/android-chrome-192x192.png
+        github: forwardemail/free-email-forwarding
+        description: |
+          Servicio de reenvío de email catch-all de código abierto simple. Fácil de autoalojar (ver en
+          [GitHub](https://github.com/forwardemail/free-email-forwarding)), o la versión alojada
+          tiene un plan gratuito así como un plan premium ($3/mes).
+
+      - name: ProtonMail
+        followWith: Plan Professional o superior
+        url: https://protonmail.com/pricing
+        icon: https://proton.me/favicons/android-chrome-192x192.png
+        tosdrId: 491
+        openSource: true
+        description: |
+          Si ya tienes el paquete Professional (€8/mes) o Visionary (€30/mes) de ProtonMail,
+          entonces una implementación de esta función está disponible vía la función Catch-All Email.
+
+    ####
+    #### Herramientas de Seguridad de Email ####
+    ####
+    - name: Herramientas de Seguridad de Email
+      alternativeTo:  ['boomerang', 'mailtrack', 'grammarly for email', 'wisestamp', 'hubspot sales']
+      services:
+      - name: Enigmail
+        url: https://www.enigmail.net
+        icon: https://upload.wikimedia.org/wikipedia/commons/5/50/Enigmail_logo_2018.svg
+        description: |
+          Add-on para cliente de email, que habilita el uso de OpenPGP para encriptar, desencriptar fácilmente,
+          verificar y firmar emails. Gratuito y de código abierto, Enigmail es compatible con Interlink
+          Mail & News y Postbox. Su sitio web contiene documentación exhaustiva y guías de inicio rápido,
+          una vez configurado es extremadamente conveniente de usar.
+
+      - name: Email Privacy Tester
+        url: https://www.emailprivacytester.com/
+        openSource: true
+        github: mikecardwell/email-privacy-tester
+        tosdrId: 9837
+        description: |
+          Herramienta rápida que te permite probar si tu cliente de email "lee" tus emails
+          antes de que los abras, y también verifica qué analíticas, recibos de lectura u otros
+          datos de rastreo permite que se envíen de vuelta al remitente. El sistema es
+          de código abierto ([en GitLab](https://gitlab.com/mikecardwell/ept3)), desarrollado por
+          [Mike Cardwell](https://www.grepular.com/) y confiable, pero si no quieres usar tu email real,
+          crear una segunda cuenta con el mismo proveedor debería dar resultados idénticos.
+
+      - name: DKIM Verifier
+        url: https://addons.thunderbird.net/en-US/thunderbird/addon/dkim-verifier/?collection_id=a5557f08-eafd-7a39-81c6-09127da790f7
+        icon: https://addons.thunderbird.net/user-media/addon_icons/438/438634-64.png
+        github: lieser/dkim_verifier
+        description: |
+          Verifica firmas DKIM y muestra el resultado en la cabecera del email, para ayudar a detectar emails spoofed (que no vienen del dominio que afirman).
+
+      notableMentions: >
+        Si estás usando ProtonMail, entonces el [ProtonMail Bridge](https://protonmail.com/bridge/thunderbird)
+        te permite sincronizar y respaldar tus emails a tu propio cliente de email de escritorio.
+        Funciona bien con Thunderbird, Microsoft Outlook y otros.
+
+    ####
+    #### Clientes VOIP ####
+    ####
+    - name: Clientes VOIP
+      alternativeTo: ['skype', 'zoom', 'google meet', 'microsoft teams', 'cisco webex', 'gotomeeting']
+      services:
+      - name: Mumble
+        url: https://www.mumble.info/
+        github: mumble-voip/mumble
+        tosdrId: 3640
+        icon: https://www.mumble.info/css/apple-touch-icon.png
+        androidApp: se.lublin.mumla
+        iosApp: https://apps.apple.com/us/app/mumble/id443472808
+        description: |
+          Software de chat de voz de código abierto, de baja latencia y alta calidad. Puedes alojar tu
+          propio servidor, o usar una instancia alojada, hay aplicaciones cliente para Windows,
+          MacOS y Linux, así como apps de terceros para Android e iOS.
+      - name: Linphone
+        url: https://www.linphone.org
+        openSource: true
+        icon: https://f-droid.org/repo/org.linphone/en-US/icon_G0LG_yfcg9OhsnG4KMctTmcSa71iC8v2lFsDerfB_9s=.png
+        github: BelledonneCommunications/linphone-desktop
+        androidApp: org.linphone
+        iosApp: https://apps.apple.com/us/app/linphone/id360065638
+        description: |
+          Grupos de IM, video y audio de código abierto con E2E encriptación y servidor de medios integrado.
+          Basado en [SIP](https://en.wikipedia.org/wiki/Session_Initiation_Protocol)-
+          evolucionando a [RCS](https://en.wikipedia.org/wiki/Rich_Communication_Services).
+          Apps nativas para Android, iOS, Windows, GNU/Linux y MacOS.
+      notableMentions:
+      - name: SpoofCard
+        url: https://www.spoofcard.com
+        description: >
+          Te permite hacer llamadas anónimas + voicemail, pero no es de código abierto
+          y hay información limitada sobre seguridad (evita enviar info segura).
+      - name: MicroSip
+        url: https://www.microsip.org
+        description: Un softphone SIP portátil de código abierto para Windows basado en pila PJSIP.
+
+    ####
+    #### Números de Teléfono Virtuales ####
+    ####
+    - name: Números de Teléfono Virtuales
+      alternativeTo: ['google voice', 'grasshopper', 'ringcentral', 'sideline', 'burner']
+      services:
+      - name: SMSPool
+        url: https://www.smspool.net
+        icon: https://i.ibb.co/2t4MBFj/apple-touch-icon.png
+        description: |
+          ¿No te sientes cómodo dando tu número de teléfono? Protege tu identidad en línea usando nuestros números de teléfono no-VoIP de un solo uso. 
+          Soportamos más de 50+ países y más de 300+ servicios.
+        androidApp: com.smspool.app
+        iosApp: https://apps.apple.com/app/smspool/id6474617801
+        tosdrId: 10033
+        acceptsCrypto: true
+      - name: Silent.link
+        url: https://silent.link/
+        icon: https://silent.link/static/favicon/apple-icon-114x114.png
+        description: |
+          eSIM anónima para enviar/recibir SMS, llamadas entrantes e internet 4G/5G
+          + roaming mundial. No se requieren datos al registrarse. Precios asequibles, con
+          pagos y recargas aceptados en BTC. Requiere un dispositivo compatible con eSim.
+
+      - name: Crypton.sh
+        url: https://crypton.sh/
+        icon: https://crypton.sh/assets/shared/icons/favicon-32x32.png
+        github: rinzlerch/user-encryption-wrapper
+        description: |
+          Tarjeta SIM física en la nube, para enviar + recibir mensajes SMS. Los mensajes
+          se encriptan usando tu clave privada elegida. Incluye una interfaz web, así como una API para interactuar desde cualquier dispositivo.
+          Precio alrededor de €7.00/mes, y se aceptan pagos en BTC, XMR o tarjeta de crédito.
+
+      - name: Jmp.chat
+        url: https://jmp.chat/
+        icon: https://jmp.chat/static/jmp.svg
+        androidApp: com.cheogram.android.playstore
+        description: |
+          Número de teléfono para llamadas entrantes + salientes y mensajes, proporcionado por Soprani.
+          Funciona con Jabber, Matrix, Snikket, XMPP o cualquier cliente SIP. Precio desde
+          $4.99/mes. Solo disponible en EE.UU. y Canadá (a partir de 2024).
+          Ver instancias alternativas en [soprani.ca](https://soprani.ca/).
+
+      - name: MoneroSMS
+        url: https://monerosms.com
+        icon: https://i.ibb.co/Dgwr4Z0/monero-sms.png
+        description: |
+          Servicio SMS anónimo capaz de activar cuentas. Accesible vía web, CLI o
+          email. Precio desde $3.60/mes. El servicio está en beta a partir de 2022.
+
+    ####
+    #### Colaboración en Equipo ####
+    ####
+    - name: Colaboración en Equipo
+      alternativeTo: ['slack', 'microsoft teams', 'google chat', 'discord', 'asana', 'trello', 'basecamp']
+      intro: >
+        Ahora más que nunca dependemos de software para ayudar con la colaboración en equipo.
+        Desafortunadamente, muchas opciones populares, como
+        [Slack](https://www.wired.co.uk/article/slack-privacy-settings-notifications),
+        [Microsoft Teams](https://www.wired.co.uk/article/microsoft-teams-meeting-data-privacy),
+        [Google for Work](https://www.wired.com/story/google-tracks-you-privacy/) y
+        [Discord](https://cybernews.com/privacy/discord-privacy-tips-that-you-should-use-in-2020/)
+        vienen con serias implicaciones de privacidad.<br>
+        Funciones típicas de software de colaboración en equipo incluyen:
+        mensajería instantánea, mensajería grupal cerrada y abierta, llamadas de conferencia de voz y video,
+        compartir archivos/ drop de archivos, y algún nivel de funcionalidad de programación.
+      services:
+      - name: Rocket.Chat
+        url: https://rocket.chat
+        github: RocketChat/Rocket.Chat
+        tosdrId: 6533
+        icon: https://play-lh.googleusercontent.com/wGn6UxVJUVWBOEAR_864Y_TG42iCsr8Ls3xmLoT4oOimSo6lk2_2gfBATqNDNmArKzQ
+        openSource: true
+        iosApp: https://apps.apple.com/us/app/rocket-chat/id1148741252
+        androidApp: chat.rocket.android
+        description: |
+          Plataforma de colaboración en equipo fácil de desplegar y autoalojada con apps cliente multiplataforma estables y ricas en funciones.
+          La interfaz es rápida, atractiva e intuitiva, así que se necesita muy poca experiencia técnica para los usuarios de la plataforma. El conjunto de funciones
+          de Rocket.Chat es similar al de Slack, lo que lo hace un buen reemplazo para cualquier equipo
+          que busque mayor control sobre sus datos.
+
+      - name: RetroShare
+        url: https://retroshare.cc/
+        icon: https://retroshare.cc/img/retroshare-symbol.png
+        github: RetroShare/RetroShare
+        openSource: true
+        description: |
+          Comunicaciones grupales seguras, con la opción de usarse sobre Tor o I2P. Chats grupales e individuales rápidos
+          e intuitivos con texto y medios ricos usando salas de chat descentralizadas, con una función de correo para entregar mensajes a contactos offline.
+          Una función de canales permite a miembros de diferentes equipos mantenerse actualizados entre sí, y compartir archivos. También incluye foros integrados,
+          agregación de enlaces, compartir archivos y llamadas de voz y video. RetroShare es un poco más complejo de usar que algunas alternativas, y la interfaz es bastante *retro*,
+          así que podría no ser apropiado para un equipo no técnico.
+
+      - name: Element
+        url: https://element.io/
+        github: element-hq/element-web
+        tosdrId: 2498
+        icon: https://element.io/images/favicon.png
+        iosApp: https://apps.apple.com/us/app/element-messenger/id1083446067
+        androidApp: im.vector.app
+        description: |
+          Mensajero enfocado en privacidad usando el protocolo Matrix. El cliente Element permite
+          salas de chat grupal, compartir medios y llamadas grupales de voz y video.
+
+      - name: Internet Relay Chat
+        icon: https://www.dlf.pt/dfpng/middlepng/60-606143_internet-relay-chat-irc-logo-hd-png-download.png
+        openSource: true
+        url: https://en.wikipedia.org/wiki/IRC
+        description: |
+          Una solución basada en IRC es otra opción, siendo descentralizada no hay punto
+          de fallo, y es fácil de autoalojar. Sin embargo, es importante tener en mente la seguridad
+          mientras configuras tu instancia IRC y asegurar que los canales estén correctamente
+          encriptados - IRC tiende a ser mejor para comunicaciones abiertas. Hay una variedad
+          de clientes para elegir - opciones populares incluyen: The Lounge (basado en web), HexChat
+          (Linux), Pidgin (Linux), WeeChat (Linux, basado en terminal), IceChat (Windows),
+          XChat Aqua (MacOS), Palaver (iOS) y Revolution (Android).
+
+      - name: Mattermost
+        url: https://mattermost.org/
+        github: mattermost/mattermost
+        tosdrId: 2994
+        icon: https://avatars.githubusercontent.com/u/9828093
+        androidApp: com.mattermost.rn
+        iosApp: https://apps.apple.com/us/app/mattermost/id1257222717
+        description: |
+          Mattermost tiene una edición de código abierto, que puede autoalojarse. Hace un buen
+          alternativo a Slack, con apps nativas de escritorio, móvil y web y una amplia variedad
+          de integraciones.
+
+      notableMentions: >
+        Algunas plataformas de chat permiten chats grupales multiplataforma, conferencias de voz y video,
+        pero sin las funciones adicionales de colaboración.
+        Por ejemplo, [Tox](https://tox.chat/), [Session](https://getsession.org/),
+        [Ricochet](https://ricochet.im/), [Mumble](https://www.mumble.info/)
+        y [Jami](https://jami.net/).<br>
+        Para Conferencias, [OSEM](https://osem.io) es una herramienta de gestión de conferencias todo en uno
+        de código abierto, proporcionando Registro, Horarios, Sesiones en Vivo y Grabadas, Envíos de Papers, Páginas de Marketing y Administración.
+
+  - name: Herramientas de Seguridad
+    sections:
+    ####
+    #### Extensiones de Navegador ####
+    ####
+    - name: Extensiones de Navegador
+      intro: >
+        Las siguientes extensiones de navegador te dan mejor control sobre qué contenido
+        puede cargarse y ejecutarse mientras navegas.<br>
+        Antes de instalar nada, deberías leer la sección de Advertencia a continuación.
+      services:
+      - name: Privacy Badger
+        url: https://privacybadger.org/
+        icon: https://i.ibb.co/8Y1ds5X/privacy-badger.png
+        github: EFForg/privacybadger
+        tosdrId: 682
+        openSource: true
+        description: |
+          Bloquea rastreadores invisibles, para detener a anunciantes y terceros de rastrear secretamente dónde vas y qué páginas ves. **Descarga**:
+          [Chrome](https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp) -
+          [Firefox](https://addons.mozilla.org/en-GB/firefox/addon/privacy-badger17/)
+
+      - name: uBlock Origin
+        url: https://ublockorigin.com
+        tosdrId: 682
+        github: gorhill/uBlock
+        icon: https://raw.githubusercontent.com/gorhill/uBlock/master/src/img/ublock.svg
+        description: |
+          Bloquea anuncios, rastreadores y sitios de malware. **Descarga**:
+          [Chrome](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en-GB) -
+          [Firefox](https://addons.mozilla.org/en-GB/firefox/addon/ublock-origin/)
+
+      - name: ScriptSafe
+        url: https://www.andryou.com/scriptsafe
+        github: andryou/scriptsafe
+        icon: https://lh3.googleusercontent.com/c5co_NoLmEt48VC_yVp0JgKcgd83yiq_CdekGaOlBBfD5WII5mjxngERgikcQd4P56uoX9epiknU5ktXadPqj2EEVsE
+        description: |
+          Te permite bloquear la ejecución de ciertos scripts. **Descarga**:
+          [Chrome](https://chromewebstore.google.com/detail/scriptsafe/oiigbmnaadbkfbmpbfijlflahbdbdgdf) -
+          [Opera](https://addons.opera.com/en/extensions/details/scriptsafe-2/)
+
+      - name: Firefox Multi-Account Containers
+        github: mozilla/multi-account-containers
+        icon: https://addons.mozilla.org/user-media/addon_icons/782/782160-64.png
+        url: https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/
+        description: |
+          Firefox Multi-Account Containers te permite mantener partes de tu vida en línea separadas en pestañas codificadas por color que preservan tu privacidad. Las cookies se separan por contenedor, permitiéndote usar la web con múltiples identidades o cuentas simultáneamente. **Descarga**:
+          [Firefox](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/)
+
+      - name: WebRTC-Leak-Prevent
+        url: https://diafygi.github.io/webrtc-ips
+        github: aghorler/WebRTC-Leak-Prevent
+        icon: https://lh3.googleusercontent.com/n4XZC3SfmhMnrIwR1256Cmx5d51OaJImxBtJqaTQnNuWD7xqAgGI2LmAXQk6O1CffLzFNSiTqIO-ZxMCJIGTuKcG=s60
+        description: |
+          Proporciona control al usuario sobre configuraciones de privacidad de WebRTC en Chromium, para prevenir fugas de WebRTC.
+          **Descarga**: [Chrome](https://chrome.google.com/webstore/detail/webrtc-leak-prevent/eiadekoaikejlgdbkbdfeijglgfdalml?hl=en-GB).
+          Para usuarios de Firefox, puedes hacerlo a través de [configuraciones del navegador](https://www.privacytools.io/browsers/#webrtc).
+          Prueba fugas de WebRTC con [browserleaks.com/webrtc](https://browserleaks.com/webrtc)
+
+      - name: Canvas Fingerprint Blocker
+        url: https://add0n.com/canvas-fingerprint-blocker.html
+        icon: https://cdn.webextension.org/icons/canvas-fingerprint-blocker128.png
+        github: joue-quroi/canvas-fingerprint-blocker
+        description: |
+          Bloquea huellas dactilares sin remover acceso al elemento Canvas de HTML5. Las huellas dactilares de Canvas se usan comúnmente para rastreo, esta extensión ayuda a mitigar esto permitiendo que el navegador genere una clave única verdadera **Descarga**: [Chrome](https://chrome.google.com/webstore/detail/canvas-blocker-fingerprin/nomnklagbgmgghhjidfhnoelnjfndfpd) -
+          [Firefox](https://addons.mozilla.org/en-US/firefox/addon/canvas-blocker-no-fingerprint/) -
+          [Edge](https://microsoftedge.microsoft.com/addons/detail/ahiddppepedlomdleppkbljnmkchlmdc)
+
+      - name: ClearURLs
+        url: https://gitlab.com/KevinRoebert/ClearUrls
+        icon: https://addons.mozilla.org/user-media/addon_icons/839/839767-64.png
+        openSource: true
+        tosdrId: 7192
+        github: ClearURLs/Addon
+        description: |
+          Esta extensión removerá automáticamente elementos de rastreo de los parámetros GET de URLs para
+          ayudar a proteger algo de privacidad **Descarga**: [Chrome](https://chrome.google.com/webstore/detail/clearurls/lckanjgmijmafbedllaakclkaicjfmnk) -
+          [Firefox](https://addons.mozilla.org/en-US/firefox/addon/clearurls/) / [Source](https://gitlab.com/KevinRoebert/ClearUrls)
+
+      - name: CSS Exfil Protection
+        url: https://www.mike-gualtieri.com/css-exfil-vulnerability-tester
+        icon: https://www.mike-gualtieri.com/favicon.ico
+        github: mlgualtieri/CSS-Exfil-Protection
+        description: |
+          Sanitiza y bloquea cualquier regla CSS que pueda estar diseñada para robar datos, para proteger contra
+          ataques Exfil **Descarga**: [Chrome](https://chrome.google.com/webstore/detail/css-exfil-protection/ibeemfhcbbikonfajhamlkdgedmekifo) -
+          [Firefox](https://addons.mozilla.org/en-US/firefox/addon/css-exfil-protection/) - [Source](https://github.com/mlgualtieri/CSS-Exfil-Protection)
+
+      - name: First Party Isolation
+        url: https://github.com/mozfreddyb/webext-firstpartyisolation
+        github: mozfreddyb/webext-firstpartyisolation
+        icon: https://addons.mozilla.org/user-media/addon_icons/865/865865-64.png?modified=1520892249
+        description: |
+          Habilita la preferencia de aislamiento de Primera Parte (Haciendo clic en el ícono de la pecera lo deshabilita temporalmente)
+          **Descarga**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/first-party-isolation/)
+
+      - name: Privacy-Oriented Origin Policy
+        url: https://claustromaniac.github.io/poop
+        github: claustromaniac/poop
+        icon: https://addons.mozilla.org/user-media/addon_icons/1012/1012731-64.png?modified=e97aa3af
+        description: |
+          Evita que Firefox envíe cabeceras Origin cuando es menos probable que sean necesarias, para proteger
+          tu privacidad **Descarga**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/privacy-oriented-origin-policy/) -
+          [Source](https://github.com/claustromaniac/poop)
+
+      - name: LocalCDN
+        url: https://www.localcdn.org/
+        icon: https://codeberg.org/repo-avatars/5014-6cc14ee9c85003bda3adb1d71762c306
+        openSource: true
+        description: |
+          Emula frameworks remotos (ej. jQuery, Bootstrap, Angular) y los entrega como recurso local.
+          Evita solicitudes innecesarias a CDNs de rastreo **Descarga**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/localcdn-fork-of-decentraleyes/)
+
+      - name: Decentraleyes
+        url: https://decentraleyes.org
+        icon: https://addons.mozilla.org/user-media/addon_icons/521/521554-64.png
+        openSource: true
+        description: |
+          Similar a LocalCDN, sirve versiones locales de scripts comunes en lugar de llamar a CDNs de terceros.
+          Mejora la privacidad y tiempos de carga. Funciona de inmediato y juega bien con bloqueadores de contenido regulares.
+          **Descarga**: [Chrome](https://chrome.google.com/webstore/detail/decentraleyes/ldpochfccmkkmhdbclfhpagapcfdljkj) -
+          [Firefox](https://addons.mozilla.org/en-US/firefox/addon/decentraleyes) -
+          [Opera](https://addons.opera.com/en/extensions/details/decentraleyes) -
+          [Pale Moon](https://addons.palemoon.org/addon/decentraleyes) -
+          [Source](https://git.synz.io/Synzvato/decentraleyes)
+
+      - name: Privacy Essentials
+        url: https://duckduckgo.com/app
+        github: duckduckgo/duckduckgo-privacy-extension
+        openSource: true
+        tosdrId: 222
+        icon: https://avatars.githubusercontent.com/u/342708
+        description: |
+          Extensión simple de DuckDuckGo, que califica la seguridad de cada sitio. **Descarga**:
+          [Chrome](https://chrome.google.com/webstore/detail/duckduckgo-privacy-essent/bkdgflcldnnnapblkhphbgpggdiikppg?hl=en-GB) \
+          [Firefox](https://addons.mozilla.org/en-GB/firefox/addon/duckduckgo-for-firefox/)
+
+      - name: Privacy Redirect
+        url: https://github.com/SimonBrazell/privacy-redirect
+        github: SimonBrazell/privacy-redirect
+        icon: https://lh3.googleusercontent.com/pC5a_u12RlaLQhJ-5Jz87rtju2s0tCksUfZHvr3JYzAaiYZJfJapmuftodT7wuAedFOHtgxR2BGh_GmKijgiK5bJyA
+        description: |
+          Una extensión web simple que redirige solicitudes de Twitter, YouTube, Instagram y Google Maps a alternativas amigables con la privacidad
+          **Descarga**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/privacy-redirect/) - [Chrome](https://chrome.google.com/webstore/detail/privacy-redirect/pmcmeagblkinmogikoikkdjiligflglb)
+
+      - name: User Agent Switcher
+        url: https://add0n.com/useragent-switcher.html
+        icon: https://i.ibb.co/hyb1SGK/useragent-switcher128.png
+        github: ray-lothian/UserAgent-Switcher
+        description: |
+          Falsifica la cadena User-Agent del navegador, haciendo que parezca que estás en un dispositivo, navegador y versión diferentes a
+          lo que realmente usas. Esto solo hace muy poco por la privacidad, pero combinado con otras herramientas, puede permitirte
+          mantener tu huella dactilar cambiando, y alimentar info falsa a sitios que te rastrean. Algunos sitios web muestran contenido diferente,
+          dependiendo de tu user agent. **Descarga**:
+          [Chrome](https://chrome.google.com/webstore/detail/user-agent-switcher/bhchdcejhohfmigjafbampogmaanbfkg) -
+          [Firefox](https://addons.mozilla.org/firefox/addon/user-agent-string-switcher/) -
+          [Edge](https://microsoftedge.microsoft.com/addons/detail/cnjkedgepfdpdbnepgmajmmjdjkjnifa) -
+          [Opera](https://addons.opera.com/extensions/details/user-agent-switcher-8/) -
+          [Source](https://github.com/ray-lothian/UserAgent-Switcher/)
+
+      - name: PrivacySpy
+        url: https://privacyspy.org
+        github: politiwatch/privacyspy
+        tosdrId: 4346
+        icon: https://privacyspy.org/static/img/favicon-32x32.png
+        description: |
+          La extensión compañera para PrivacySpy.org - un proyecto abierto que califica, anota y archiva políticas de privacidad.
+          La extensión muestra una puntuación para la política de privacidad del sitio web actual. **Descarga**:
+          [Chrome](https://chrome.google.com/webstore/detail/privacyspy/ppembnadnhiknioggbglgiciihgmkmnd) -
+          [Firefox](https://addons.mozilla.org/en-US/firefox/addon/privacyspy/)
+
+      - name: HTTPZ
+        url: https://github.com/claustromaniac/httpz
+        github: claustromaniac/httpz
+        icon: https://addons.mozilla.org/user-media/addon_icons/1018/1018256-64.png?modified=9b273331
+        description: |
+          Actualizaciones HTTPS simplificadas para Firefox (alternativa ligera a HTTPS-Everywhere) **Descarga**:
+          [Firefox](https://addons.mozilla.org/en-US/firefox/addon/httpz/)
+
+      - name: Skip Redirect
+        url: https://github.com/sblask/webextension-skip-redirect
+        github: sblask/webextension-skip-redirect
+        icon: https://addons.mozilla.org/user-media/addon_icons/642/642100-64.png?modified=1597226821
+        description: |
+          Algunas páginas web usan páginas intermedias antes de redirigir a una página final. Esta extensión intenta extraer la URL final
+          de la URL intermedia e ir directamente allí si tiene éxito **Descarga**:
+          [Firefox](https://addons.mozilla.org/en-US/firefox/addon/skip-redirect/) -
+          [Source](https://github.com/sblask/webextension-skip-redirect)
+
+      - name: Web Archives
+        icon: https://i.imgur.com/H9zwf8l.png
+        url: https://github.com/dessant/web-archives
+        github: dessant/web-archives
+        description: |
+          Ver versiones archivadas y cacheadas de páginas web en más de 10 motores de búsqueda, como Wayback Machine, Archive.is, Google etc.
+          Útil para verificar legitimidad de sitios web y ver logs de cambios **Descarga**:
+          [Firefox](https://addons.mozilla.org/en-US/firefox/addon/view-page-archive/) -
+          [Chrome](https://chrome.google.com/webstore/detail/web-archives/hkligngkgcpcolhcnkgccglchdafcnao) -
+          [Edge](https://microsoftedge.microsoft.com/addons/detail/apcfghlggldjdjepjnahfdjgdcdekhda) -
+          [Source](https://github.com/dessant/web-archives)
+
+      - name: Flagfox
+        url: https://flagfox.wordpress.com/
+        icon: https://flagfox.files.wordpress.com/2014/02/flagfoxlogowithname1.png
+        tosdrId: 6150
+        description: |
+          Muestra una bandera de país que representa la ubicación del servidor del sitio web actual, lo que puede ser útil de un vistazo.
+          Haz clic en el ícono para más herramientas como verificaciones de seguridad del sitio, whois, validación etc. **Descarga**:
+          [Firefox](https://addons.mozilla.org/en-US/firefox/addon/flagfox/)
+
+      - name: Lightbeam
+        url: https://mozilla.github.io/lightbeam/
+        github: mozilla/lightbeam-we
+        icon: https://mozilla.github.io/lightbeam/img/lightbeam_logo-only_32x32.png
+        description: >
+          Visualiza en detalle los servidores con los que contactas cuando navegas en Internet.
+          Creado por Gary Kovacs (ex CEO de Mozilla), presentado en su [TED Talk](https://www.ted.com/talks/gary_kovacs_tracking_our_online_trackers).
+          **Descarga**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/lightbeam-3-0/)
+          - [Source](https://github.com/mozilla/lightbeam-we)
+
+      - name: Track Me Not
+        url: http://trackmenot.io
+        github: vtoubiana/TrackMeNot
+        icon: https://static.wixstatic.com/media/654565_824403a4d02548d783f8ca81f9e6bf48~mv2.png/v1/fill/w_268,h_264,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Logo_Button_TMN.png
+        description: >
+          Ayuda a proteger a los buscadores web de vigilancia y perfilado de datos, mediante la creación
+          de ruido sin sentido y ofuscación, delineado en su [whitepaper](http://trackmenot.io/resources/trackmenot2009.pdf).
+          Controvertido si esto es un buen enfoque o no **Descarga**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/trackmenot/) -
+          [Source](https://github.com/vtoubiana/TrackMeNot)
+
+      - name: AmIUnique Timeline
+        url: https://amiunique.org/timeline
+        icon: https://amiunique.org/favicon.ico
+        tosdrId: 4202
+        description: >
+          Te permite entender mejor la evolución de las huellas dactilares del navegador (que es lo que
+          los sitios web usan para identificarte y rastrearte de manera única). **Descarga**: [Chrome](https://chrome.google.com/webstore/detail/amiunique/pigjfndpomdldkmoaiiigpbncemhjeca)
+          - [Firefox](https://addons.mozilla.org/en-US/firefox/addon/amiunique)
+
+      - name: Netcraft Extension
+        url: https://www.netcraft.com/apps/browser
+        icon: https://lh3.googleusercontent.com/c78SvSl7OD2thLmgX5irlo1tvxGVtkziKTKmp7VByjvvrw2czkP2cFbbRASmopQBV9-PpNBD_NOqt8WIC4JVc0WB3A=s60
+        description: >
+          Te notifica cuando visitas un sitio de phishing conocido o potencial, y detecta JavaScript sospechoso (incluyendo skimmers y mineros).
+          También proporciona una calificación simple para la legitimidad y seguridad de un sitio dado. Genial para usuarios menos técnicos. Netcraft también tiene una
+          herramienta en línea útil: [Site Report](https://sitereport.netcraft.com/) para verificar qué
+          está corriendo cualquier sitio web dado. **Descarga**: [Chrome](https://chrome.google.com/webstore/detail/netcraft-anti-phishing-ex/bmejphbfclcpmpohkggcjeibfilpamia)
+          \ [Firefox](https://addons.mozilla.org/en-us/firefox/addon/netcraft-toolbar?src=external-apps-hero)
+          \ [Opera](https://addons.opera.com/en/extensions/details/netcraft-anti-phishing-extension/)
+          \ [Edge](https://microsoftedge.microsoft.com/addons/detail/ngjhgbnmdjjnmejmpamalgnlnmopllkm)
+
+      - name: HTTPS Everywhere
+        url: https://eff.org/https-everywhere
+        github: EFForg/https-everywhere
+        tosdrId: 682
+        description: |
+          **NOTA** En navegadores modernos, esto [ya no es necesario](https://www.eff.org/deeplinks/2021/09/https-actually-everywhere)
+          Fuerza que los sitios carguen en HTTPS, para encriptar tus comunicaciones con sitios web,
+          haciendo tu navegación más segura (Similar a [Smart HTTPS](https://mybrowseraddon.com/smart-https.html)).
+          Nota que esta funcionalidad ahora está incluida por defecto en la mayoría de navegadores modernos. **Descarga**:
+          [Chrome](https://www.eff.org/https-everywhere) \
+          [Firefox](https://www.eff.org/files/https-everywhere-latest.xpi)
+
+      - name: Linguist
+        url: https://linguister.io
+        github: https://github.com/translate-tools/linguist
+        description: |
+          Linguist es una solución de traducción enfocada en privacidad en el navegador que tiene un traductor offline integrado
+          y permite a los usuarios crear [traductores personalizados](https://linguister.io/docs/CustomTranslator) para usar cualquier API de traducción,
+          incluso si está desplegada localmente.
+          Traducción de página completa, traducción de texto seleccionado, diccionario, historial,
+          y otras funciones que esperarías de una solución de traducción completa en el navegador. **Descarga**:
+          [Chrome](https://chrome.google.com/webstore/detail/gbefmodhlophhakmoecijeppjblibmie) / [Firefox](https://addons.mozilla.org/addon/linguist-translator/)
+
+      notableMentions:
+      - name: Extension source viewer
+        url: https://addons.mozilla.org/en-US/firefox/addon/crxviewer
+        description: >
+          Una extensión útil para ver el código fuente de otra extensión de navegador,
+          que es una herramienta útil para verificar que el código hace lo que dice.
+      wordOfWarning: |
+        - Tener muchas extensiones instaladas aumenta la entropía, causando que tu huella dactilar sea más única, por lo tanto facilitando el rastreo.
+        - Mucha de la funcionalidad de las extensiones anteriores puede aplicarse sin instalar nada, configurando las opciones del navegador tú mismo. Para Firefox esto se hace en el user.js
+        - Ten cuidado al instalar add-ons de navegador desconocidos, ya que algunos pueden comprometer tu seguridad y privacidad. Al momento de escribir, la lista anterior eran todas extensiones de código abierto, verificadas y 'seguras'.
+        - En la mayoría de situaciones, solo unas pocas de las extensiones anteriores serán necesarias en combinación.
+        - Ver el [wiki de arkenfox](https://github.com/arkenfox/user.js/wiki/4.1-Extensions) para más información sobre la obsolescencia e inutilidad de muchas extensiones populares, y por qué podrías necesitar solo un conjunto muy limitado.
+
+    ####
+    #### Apps Móviles ####
+    ####
+    - name: Apps Móviles
+      services:
+      - name: Orbot
+        url: https://support.torproject.org/glossary/orbot/
+        github: guardianproject/orbot
+        icon: https://play-lh.googleusercontent.com/dIIbpr1fh-w7ykJJmfLyu6UH1HJ8bpFKEmyUlKqYHSEinG8v_B7mlqgeTzlFRhs0Uw=s48
+        description: |
+          Proxy Tor a nivel de sistema, que encripta tu conexión a través de múltiples nodos.
+          También puedes usarlo junto con Tor Browser para acceder a sitios .onion.
+
+      - name: NetGuard
+        url: https://netguard.me/
+        github: M66B/NetGuard
+        icon: https://play-lh.googleusercontent.com/XEd1PsXgOSNNpD2hlZMvigIOJ9e5JCL2KhCJ4X984Az5EFw6YiecDebqdsZ12VNU2kPu=w240-h480
+        androidApp: org.torproject.android
+        description: |
+          Una app de firewall para Android, que no requiere root. NetGuard proporciona formas simples
+          y avanzadas para bloquear el acceso a internet, donde aplicaciones y direcciones
+          pueden permitirse o denegarse individualmente acceso a tu Wi-Fi y/o conexión móvil.
+
+      - name: Island
+        url: https://island.oasisfeng.com/
+        github: oasisfeng/island
+        icon: https://play-lh.googleusercontent.com/ywvaxXcH90yttClJvgHR5UsfDnGS_YNtFiW6fQJm1p7_6HX9Dbn0v2J9gIzOOKFYQOnA=w240-h480
+        androidApp: com.oasisfeng.island
+        description: |
+          Un entorno sandbox, que te permite clonar apps seleccionadas y ejecutarlas en una caja aislada,
+          previniendo que accedan a tus datos personales o información del dispositivo.
+
+      - name: Insular
+        url: https://gitlab.com/secure-system/Insular
+        github: oasisfeng/island
+        icon: https://gitlab.com/uploads/-/system/project/avatar/18237274/ic_launcher-playstore.png?width=48
+        description: |
+          Un fork activamente mantenido del proyecto Island con mejoras adicionales.
+
+      - name: Exodus
+        url: https://exodus-privacy.eu.org/en/page/what/#android-app
+        icon: https://exodus-privacy.eu.org/img/favicons/apple-touch-icon.png
+        tosdrId: 3843
+        androidApp: org.eu.exodus_privacy.exodusprivacy
+        description: |
+          Muestra qué rastreadores tiene cada una de tus apps instaladas, para que puedas entender mejor cómo se recolectan tus datos. Usa datos de la base de datos Exodus de APKs escaneados.
+
+      - name: Bouncer
+        url: https://play.google.com/store/apps/details?id=com.samruston.permission
+        icon: https://play-lh.googleusercontent.com/QbgM-Vgqp32sNMgwC0kD4kJW3YVp7xiPcVIHNcbSQgrkTIDqSfTqSBXKEvoZ9SNSjxw=w240-h480
+        androidApp: com.samruston.permission
+        description: |
+          Te da la habilidad de otorgar permisos temporalmente, para que puedas por ejemplo
+          usar la cámara para tomar una foto de perfil, pero cuando cierras la app dada, esos permisos
+          se revocan.
+
+      - name: XPrivacyLua
+        url: https://lua.xprivacy.eu/
+        icon: https://raw.githubusercontent.com/M66B/XPrivacyLua/master/app/src/main/ic_launcher-web.png
+        github: M66B/XPrivacyLua
+        description: |
+          Gestor de privacidad simple de usar para Android, que te permite alimentar apps con datos falsos cuando
+          solicitan permisos íntimos. Resuelve el problema causado por apps que fallan cuando revocas permisos,
+          y protege tus datos reales compartiendo solo información falsa. Te permite ocultar registro de llamadas, calendario, mensajes SMS, ubicación, apps instaladas, fotos, portapapeles,
+          datos de red y más. Y previene acceso a cámara, micrófono, telemetría, GPS y otros sensores.
+
+      - name: SuperFreezZ
+        url: https://superfreezz.gitlab.io/
+        icon: https://f-droid.org/repo/icons-640/superfreeze.tool.android.1000.png
+        description: |
+          Hace posible congelar completamente todas las actividades de fondo por app.
+          Propósito intencionado es acelerar tu teléfono y prolongar la vida de la batería, pero esta app es
+          también una gran utilidad para detener ciertas apps de recolectar datos y rastrear tus acciones
+          mientras corren en segundo plano. Ver en [F-Droid](https://f-droid.org/en/packages/superfreeze.tool.android)
+
+      - name: Haven
+        url: https://guardianproject.github.io/haven/
+        icon: https://play-lh.googleusercontent.com/PdE-P3oTwa6fFKqQrSuYS1S7Aa_bIq-GECLhj8kvTzXdSc6S_hUtW2hUx0aCP-3h0pQ=w240-h480
+        github: guardianproject/haven
+        androidApp: org.havenapp.main
+        tosdrId: 682
+        description: |
+          Te permite protegerte a ti mismo, tu espacio personal y tus posesiones - sin comprometer la seguridad. Aprovechando sensores del dispositivo para monitorear el espacio cercano, Haven fue
+          desarrollado por The Guardian Project, en asociación con Edward Snowden.
+
+      - name: Secure Task
+        url: https://play.google.com/store/apps/details?id=com.balda.securetask
+        icon: https://play-lh.googleusercontent.com/Xb_KbjGC3J8xrj1QmZqYhUq1A6aww5ikFuXfCqJonww-vz38y6xUjHzvH65AGrQU9P4=s48
+        androidApp: com.balda.securetask
+        description: |
+          Activa acciones cuando se cumplen ciertas condiciones de seguridad, como múltiples intentos de login fallidos o cambios en configuraciones de monitor. Requiere Tasker, y necesita configurarse con
+          ADB, el dispositivo no necesita ser rooteado.
+
+      - name: Cryptomator
+        url: https://cryptomator.org/android/
+        icon: https://avatars.githubusercontent.com/u/11850518?s=200&v=4
+        github: cryptomator/android
+        androidApp: org.cryptomator
+        iosApp: https://apps.apple.com/us/app/cryptomator/id1560822163
+        tosdrId: 4403
+        description: |
+          Encripta archivos y carpetas del lado del cliente, antes de subirlos a almacenamiento en la nube (como Google
+          Drive, One Drive o Dropbox), lo que significa que ninguno de tus documentos personales sale de tu dispositivo en texto plano.
+
+      - name: 1.1.1.1
+        url: https://1.1.1.1/
+        icon: https://1.1.1.1/favicon.ico
+        tosdrId: 893
+        iosApp: https://apps.apple.com/us/app/1-1-1-1-faster-internet/id1423538627
+        androidApp: com.cloudflare.onedotonedotonedotone
+        description: |
+          Te permite usar el DNS rápido y seguro 1.1.1.1 de CloudFlare, con DNS over HTTPS, y también tiene la opción
+          de habilitar el VPN WARP+ de CloudFlare.
+
+      - name: Fing App
+        icon: https://avatars.githubusercontent.com/u/62335928?s=200&v=4
+        url: https://www.fing.com/products/fing-app
+        androidApp: com.overlook.android.fing
+        iosApp: https://apps.apple.com/us/app/fing-network-scanner/id430921107
+        description: |
+          Un escáner de red para ayudarte a monitorear y asegurar tu red WiFi. La app es totalmente gratuita,
+          pero para usar los controles avanzados, necesitarás un Fing Box.
+
+      - name: DPI Tunnel
+        github: nomoresat/DPITunnel-android
+        icon: https://raw.githubusercontent.com/nomoresat/DPITunnel-android/main/assets/logo.webp
+        url: https://f-droid.org/packages/ru.evgeniy.dpitunnelcli/
+        description: |
+          Una aplicación para Android que usa varias técnicas para evadir sistemas DPI (Deep Packet Inspection),
+          que se usan para bloquear algunos sitios (no disponible en Play Store).
+
+      - name: Blokada
+        url: https://blokada.org/
+        icon: https://blokada.org/favicon.png
+        github: blokadaorg/blokada
+        androidApp: org.blokada.sex
+        iosApp: https://apps.apple.com/us/app/blokada/id1508341781
+        tosdrId: 8557
+        description: |
+          Esta aplicación bloquea anuncios y rastreadores, no requiere root y funciona para todas las apps en tu
+          teléfono Android. Mira cómo funciona aquí.
+
+      - name: SnoopSnitch
+        url: https://opensource.srlabs.de/projects/snoopsnitch
+        github: srlabs/snoopsnitch
+        icon: https://f-droid.org/repo/icons-640/de.srlabs.snoopsnitch.50.png
+        androidApp: de.srlabs.snoopsnitch
+        description: |
+          Recopila y analiza datos de radio móvil para hacerte consciente de la seguridad de tu red móvil y advertirte
+          sobre amenazas como estaciones base falsas (IMSI catchers), rastreo de usuario y actualizaciones over-the-air.
+          Obtén de [F-Droid](https://f-droid.org/en/packages/de.srlabs.snoopsnitch/)
+
+      - name: TrackerControl
+        url: https://trackercontrol.org/
+        github: TrackerControl/tracker-control-android
+        icon: https://trackercontrol.org/images/logo.png
+        androidApp: net.kollnig.missioncontrol.play
+        description: |
+          Monitorea y controla la recolección oculta de datos en apps móviles sobre comportamiento de usuario/ rastreo.
+          Obtén de [F-Droid](https://f-droid.org/en/packages/net.kollnig.missioncontrol.fdroid/)
+
+      - name: Greentooth
+        url: https://gitlab.com/nbergman/greentooth
+        icon: https://f-droid.org/repo/com.smilla.greentooth/en-US/icon_8WaREJ2f7uFLdL9QGDL4xSqsIRB7wgdwv9BY_ET0WEg=.png
+        description: |
+          Deshabilita automáticamente Bluetooth cuando no se usa. Ahorra batería y previene algunos riesgos de seguridad.
+          Obtén de [F-Droid](https://f-droid.org/en/packages/com.smilla.greentooth/)
+
+      - name: PrivateLock
+        url: https://github.com/wesaphzt/privatelock
+        github: wesaphzt/privatelock
+        icon: https://f-droid.org/repo/com.wesaphzt.privatelock/en-US/icon_c5gFGZ7VhAR-kLihEfLVrStxIushKtWADc7pR1hQ6b4=.png
+        description: |
+          Bloquea automáticamente tu teléfono basado en fuerza de movimiento/ aceleración.
+          Obtén de [F-Droid](https://f-droid.org/en/packages/com.wesaphzt.privatelock/)
+          Ver también [PluckLock](https://github.com/SyntaxBlitz/PluckLock)
+
+      - name: CamWings
+        url: https://schiffer.tech/camwings-mobile.html
+        icon: https://schiffer.tech/img/logo.png
+        openSource: false
+        androidApp: com.schiffertech.camwings
+        description: |
+          Previene que procesos de fondo accedan sin autorización a la cámara de tu dispositivo. Mejor aún,
+          usa un sticker para webcam.
+
+      - name: ScreenWings
+        url: https://schiffer.tech/screenwings-mobile.html
+        icon: https://schiffer.tech/img/logo.png
+        openSource: false
+        androidApp: com.schiffertech.screenwings
+        description: |
+          Previene que procesos de fondo tomen capturas de pantalla no autorizadas, lo que podría exponer datos sensibles.
+
+      - name: AFWall+
+        url: https://github.com/ukanth/afwall/
+        github: ukanth/afwall
+        icon: https://play-lh.googleusercontent.com/LGMnS6aiFUxTLMlDQ4VYaJG0V2lY3lr_ru9QZ3OiCp-YZlsCz3F_v0oWQnqrN-giBA=s48
+        androidApp: dev.ukanth.ufirewall
+        description: |
+          Android Firewall+ (AFWall+) es un editor avanzado de iptables (GUI) para dispositivos Android rooteados,
+          que proporciona control muy granular sobre qué apps Android se permiten acceder a la red.
+          Obtén de [F-Droid](https://f-droid.org/packages/dev.ukanth.ufirewall/)
+
+      - name: Catch the Man-in-the-Middle
+        url: https://play.google.com/store/apps/details?id=me.brax.certchecker
+        icon: https://play-lh.googleusercontent.com/hMhLdDNBR_rBIDctJ5yCPbyPy0fi_6FHp9MdgaOIPPedyqgwr6tsZq_AO3W1z4Zb8HJ_=w240-h480
+        androidApp: me.brax.certchecker
+        description: |
+          Herramienta simple que compara huellas SHA-1 de los certificados SSL vistos desde tu dispositivo,
+          y el certificado visto desde una red externa. Si no coinciden, esto podría indicar un
+          man-in-the-middle modificando solicitudes.
+
+      - name: RethinkDNS & Firewall
+        url: https://rethinkdns.com
+        github: celzero/rethink-app
+        tosdrId: 4691
+        icon: https://f-droid.org/repo/com.celzero.bravedns/en-US/icon_AwgyVcHjczoaNxANCvUeSJrEfOWsIIeIpCgBaUKoXuY=.png
+        androidApp: com.celzero.bravedns
+        description: |
+          Una app de bloqueo de anuncios y firewall de código abierto para Android 6+ (no requiere root).
+
+      - name: F-Droid
+        url: https://f-droid.org/
+        openSource: true
+        tosdrId: 2182
+        icon: https://f-droid.org/assets/apple-touch-icon_ypJwtCrcixeH_qV6LdcMYk1anFIR9o-_ufR__1wNdJY=.png
+        description: |
+          F-Droid es un catálogo instalable de aplicaciones FOSS para Android. El cliente te permite
+          navegar, instalar y mantener actualizaciones en tu dispositivo.
+
+      wordOfWarning: |
+        Demasiadas apps instaladas aumentarán tu superficie de ataque - solo instala aplicaciones que necesites.
+        Asegúrate de verificar los permisos y qué datos tiene acceso una app antes de instalar.
+        Solo instala de fuentes oficiales.
+      notableMentions: |
+        Para más apps de seguridad y privacidad de código abierto, revisa estos publicadores:
+        [The Guardian Project](https://guardianproject.info) ([Play Store](https://play.google.com/store/apps/dev?id=6502754515281796553), [F-Droid](https://search.f-droid.org/?q=guardianproject)),
+        [The Tor Project](https://www.torproject.org/) ([Play Store](https://play.google.com/store/apps/developer?id=The+Tor+Project), [F-Droid](https://search.f-droid.org/?q=torproject)),
+        [Oasis Feng](https://github.com/oasisfeng) ([Play Store](https://play.google.com/store/apps/dev?id=7664242523989527886)),
+        [FairCode (Marcel Bokhorst)](https://www.faircode.eu/) ([Play Store](https://play.google.com/store/apps/dev?id=8420080860664580239), [F-Droid](https://search.f-droid.org/?q=faircode)),
+        [SECUSO Research Group](https://secuso.aifb.kit.edu/english/105.php) ([Play Store](https://play.google.com/store/apps/developer?id=SECUSO+Research+Group&hl=en_US), [F-Droid](https://search.f-droid.org/?q=secuso)),
+        y [Fossify](https://www.fossify.org) ([Play Store](https://play.google.com/store/apps/dev?id=9070296388022589266), [F-Droid](https://search.f-droid.org/?q=fossify)) -
+        todos son desarrolladores u organizaciones confiables, que han hecho un trabajo increíble.
+
+        Para seguridad ofensiva y defensiva, ver el catálogo de apps de Kali [Nethunter](https://store.nethunter.com/en/packages)
+
+        Para usuarios *avanzados*, las siguientes herramientas pueden usarse para monitorear de cerca
+        tu dispositivo y redes, para detectar cualquier actividad inusual.
+        [PortDroid] para análisis de red, [Packet Capture] para monitorear tráfico de red,
+        [SysLog] para ver logs del sistema, [Dexplorer] para leer archivos .dex o .apk de tus apps instaladas, y [Check and Test] para verificar estado y detalles del hardware del dispositivo.
+
+    ####
+    #### Herramientas en Línea ####
+    ####
+    - name: Herramientas en Línea
+      intro: >
+        Una selección de herramientas y utilidades en línea gratuitas, para verificar, probar y proteger tu seguridad
+      services:
+      - name: Have i been pwned
+        url: https://haveibeenpwned.com
+        icon: https://i.ibb.co/XxmfTyw/haveibeenpwnd.png
+        tosdrId: 3435
+        description: |
+          Verifica si tus credenciales (dirección de email o contraseña) han sido comprometidas en una brecha de datos.
+          Ver también Firefox Monitor.
+
+      - name: εxodus
+        url: https://reports.exodus-privacy.eu.org
+        icon: https://i.ibb.co/Vvq8XrM/Exodus.png
+        github: Exodus-Privacy/website
+        tosdrId: 3843
+        description: |
+          Verifica cuántos y qué rastreadores tiene cualquier app Android. Útil para entender cómo se recolectan datos antes de instalar un APK cierto, también muestra qué permisos pide la app.
+
+      - name: Am I Unique?
+        url: https://amiunique.org/fingerprint
+        icon: https://amiunique.org/favicon.ico
+        tosdrId: 4202
+        description: |
+          Muestra cuán identificable eres en Internet generando una huella dactilar basada en información del dispositivo.
+          Así es como muchos sitios web te rastrean (incluso sin cookies habilitadas), así que el objetivo es no ser único.
+
+      - name: Panopticlick
+        url: https://panopticlick.eff.org/
+        icon: https://coveryourtracks.eff.org/static/favicon.ico
+        github: EFForg/cover-your-tracks
+        description: |
+          Verifica si tu navegador es seguro contra rastreo. Analiza cuán bien tu navegador y add-ons te protegen
+          contra técnicas de rastreo en línea, y si tu sistema está configurado de manera única—y por lo tanto identificable.
+
+      - name: Phish.ly
+        url: https://phish.ly/
+        icon: https://phish.ly/images/logo.svg
+        description: |
+          Analiza emails, verificando las URLs y creando un hash SHA256 y MD5 de adjuntos, con un enlace a VirusTotal.
+          Para usar el servicio, solo reenvía un email potencialmente malicioso o sospechoso a scan@phish.ly, y una respuesta automática incluirá los resultados. Afirman que todos los datos de email se purgan después del análisis, pero sería sabio no incluir información sensible, y usar una dirección de reenvío.
+
+      - name: Browser Leak Test
+        url: https://browserleaks.com
+        icon: https://browserleaks.com/favicon.ico
+        tosdrId: 7967
+        description: |
+          Muestra qué datos de identidad personal se están filtrando a través de tu navegador, para que puedas protegerte mejor
+          contra huellas dactilares.
+
+      - name: IP Leak Test
+        url: https://ipleak.net
+        icon: https://ipleak.net/favicon.ico
+        tosdrId: 7968
+        description: |
+          Muestra tu dirección IP y otros detalles asociados (ubicación, ISP, verificación WebRTC, DNS y mucho más).
+
+      - name: EXIF Remove
+        url: https://www.exifremove.com
+        icon: https://www.exifremove.com/favicon.ico
+        description: |
+          Muestra y remueve metadatos y EXIF de una foto o documento subido.
+
+      - name: Redirect Detective
+        url: https://redirectdetective.com
+        icon: https://redirectdetective.com/redirect-detective.png
+        description: |
+          Verifica dónde redirige una URL sospechosa (sin tener que hacer clic). Te permite evitar ser rastreado al no ser
+          redirigido vía sitios de adware/rastreo, o ver si un enlace acortado resuelve un sitio legítimo, o ver si
+          el enlace es un anuncio de afiliado.
+
+      - name: Blocked.org
+        url: https://www.blocked.org.uk
+        icon: https://www.blocked.org.uk/assets/images/blocked/socialmedia/blocked_result.jpg
+        description: |
+          Verifica si un sitio web dado está bloqueado por filtros aplicados por tus Proveedores de Servicios de Internet (ISP) móviles y de banda ancha.
+
+      - name: Virus Total
+        url: https://www.virustotal.com
+        icon: https://www.virustotal.com/gui/images/manifest/icon-192x192.png
+        tosdrId: 1886
+        description: |
+          Analiza un recurso web potencialmente sospechoso (por URL, IP, dominio o hash de archivo) para detectar tipos de malware
+          (*nota: los archivos se escanean públicamente*).
+
+      - name: Hardenize
+        url: https://www.hardenize.com/
+        icon: https://www.hardenize.com/favicon/android-chrome-192x192.png
+        description: |
+          Escanea sitios web y muestra una visión general de seguridad, relacionada con factores como HTTPS, info de dominio, datos de email, protocolos www
+          y demás.
+
+      - name: Is Legit?
+        url: https://www.islegitsite.com/
+        icon: https://www.islegitsite.com/apple-touch-icon.png
+        description: |
+          Verifica si un sitio web o negocio es una estafa, antes de comprar algo de él.
+
+      - name: Should I Remove It?
+        url: https://www.shouldiremoveit.com
+        icon: https://www.shouldiremoveit.com/favicon.ico
+        description: |
+          ¿Alguna vez has estado desinstalando programas de tu PC Windows y no estás seguro de qué es algo? Should I Remove It es una
+          base de datos de software Windows, detallando si es esencial, inofensivo o peligroso.
+
+      - name: 10 Minute Mail
+        url: https://10minemail.com/
+        icon: https://10minemail.com/blog/content/images/size/w256h256/2021/05/10min_mobile_icon@2x.png
+        tosdrId: 838
+        description: |
+          Genera dirección de email temporal desechable, para evitar dar tus detalles reales.
+
+      - name: MXToolBox Mail Headers
+        url: https://mxtoolbox.com/Public/Tools/EmailHeaders.aspx
+        icon: https://mxtoolbox.com/favicon.ico
+        description: |
+          Herramienta para analizar cabeceras de email, útil para verificar la autenticidad de mensajes, así como saber qué info
+          estás revelando en tus mensajes salientes.
+
+      - name: Am I FloCed?
+        url: https://amifloced.org/
+        icon: https://amifloced.org/favicon.ico
+        description: |
+          Google está probando una nueva función de rastreo llamada Federated Learning of Cohorts (aka "FLoC"). Actualmente afecta
+          al 0.5% de usuarios de Chrome, esta herramienta desarrollada por la EFF detectará si estás afectado, y proporcionará info adicional
+          sobre cómo protegerte.
+
+      - name: Site Report
+        url: https://sitereport.netcraft.com/
+        icon: https://static.netcraft.com/images/favicon.ico
+        description: |
+          Una herramienta de Netcraft, para analizar qué está corriendo cualquier sitio web dado, dónde está ubicado e información sobre su
+          host, registrador, IP y certificados SSL.
+
+      wordOfWarning: >
+        Los navegadores son inherentemente inseguros, ten cuidado al subir o ingresar detalles personales.
+
+  - name: Redes
+    sections:
+    ####
+    #### Redes Privadas Virtuales ####
+    ####
+    - name: Redes Privadas Virtuales
+      alternativeTo: ['nordvpn', 'expressvpn', 'cyberghost', 'surfshark', 'ipvanish', 'hotspot shield']
+      services:
+      - name: Mullvad
+        url: http://mullvad.net/en
+        github: mullvad/mullvadvpn-app
+        securityAudited: true
+        icon: https://mullvad.net/apple-touch-icon.png
+        tosdrId: 641
+        androidApp: net.mullvad.mullvadvpn
+        iosApp: https://apps.apple.com/us/app/mullvad-vpn/id1488466513
+        description: |
+          Mullvad es uno de los mejores para privacidad, tienen un proceso de registro totalmente anónimo,
+          no necesitas proporcionar ningún detalle, puedes elegir pagar anónimamente también
+          (con Monero, BTC o efectivo).
+
+      - name: Azire
+        url: https://www.azirevpn.com/
+        icon: https://www.azirevpn.com/assets/img/apple-icon-57x57.png
+        tosdrId: 6639
+        openSource: false
+        androidApp: com.azirevpn.android
+        iosApp: https://apps.apple.com/us/app/azirevpn/id6444623166
+        description: |
+          Azire es un proveedor de VPN sueco, que posee su propio hardware con almacenamiento físicamente removido
+          y una política de no logs. Precio desde €3.25/mes, con cripto (incluyendo XMR)
+          soportado. Nota que aún no han sido auditados, y las apps cliente no son de código abierto,
+          para más info, ver #140.
+
+      - name: IVPN
+        url: https://www.ivpn.net/
+        github: ivpn/desktop-app
+        openSource: true
+        securityAudited: true
+        tosdrId: 2748
+        icon: https://avatars.githubusercontent.com/u/38857113
+        androidApp: net.ivpn.client
+        iosApp: https://apps.apple.com/us/app/ivpn-secure-vpn-for-privacy/id1193122683
+        description: |
+          VPN Auditada Independientemente con registro anónimo, sin logs, sin nube ni datos de cliente almacenados,
+          apps y sitio web de código abierto. Ética fuerte: sin rastreadores, sin promesas falsas,
+          sin anuncios de vigilancia. Acepta varios métodos de pago incluyendo criptomonedas.
+
+      - name: ProtonVPN
+        url: https://protonvpn.com
+        icon: https://protonvpn.com/favicons/apple-touch-icon.png
+        github: ProtonVPN/android-app
+        securityAudited: true
+        tosdrId: 1745
+        iosApp: https://apps.apple.com/us/app/proton-vpn-fast-secure/id1437005085
+        androidApp: ch.protonvpn.android
+        description: |
+          De los creadores de ProtonMail, ProtonVPN tiene una sólida reputación. Tienen una suite completa
+          de apps nativas amigables para móvil y escritorio. ProtonVPN es uno de los pocos proveedores "confiables"
+          que también ofrecen un plan gratuito.
+
+      - name: OVPN
+        url: https://www.ovpn.com
+        icon: https://www.ovpn.com/favicon.ico
+        tosdrId: 2981
+        securityAudited: false
+        androidApp: com.ovpn.android
+        iosApp: https://apps.apple.com/us/app/ovpn-unlimited-vpn-wifi-proxy/id1520543719
+        description: |
+          Un servicio VPN probado en corte con soporte para Wireguard y OpenVPN, y bloqueo de anuncios opcional.
+          Corriendo en hardware dedicado, sin discos duros.
+
+      wordOfWarning: |
+        - *Una VPN no te hace anónimo - simplemente cambia tu dirección IP pública a la de tu proveedor de VPN, en lugar de tu ISP. Tu sesión de navegación aún puede vincularse a tu identidad real ya sea a través de detalles de tu sistema (como user agent, resolución de pantalla incluso patrones de tipeo), cookies / almacenamiento de sesión, o por los datos identificables que ingresas. [Lee más sobre huellas dactilares](https://pixelprivacy.com/resources/browser-fingerprinting/)*
+        - *Registros - Si eliges usar una VPN porque no estás de acuerdo con que tu ISP registre todo tu historial de navegación, entonces es importante tener en mente que tu proveedor de VPN puede ver (y manipular) todo tu tráfico. Muchas VPNs afirman no mantener logs, pero no puedes estar seguro de esto ([fugas de VPN](https://vpnleaks.com/)). Ver [este artículo](https://gist.github.com/joepie91/5a9909939e6ce7d09e29) para más*
+        - *Fugas de IP - Si se configura incorrectamente, tu IP podría exponerse a través de una fuga DNS. Esto suele pasar cuando tu sistema accede unknowingly a servidores DNS predeterminados en lugar de servidores DNS anónimos asignados por una red de anonimato o VPN. Lee más: [Qué es una fuga DNS](https://www.dnsleaktest.com/what-is-a-dns-leak.html), [Prueba de Fuga DNS](https://www.dnsleaktest.com), [Cómo Arreglar una Fuga DNS](https://www.dnsleaktest.com/how-to-fix-a-dns-leak.html)*
+        - *Sigilo - Será visible para tu adversario que estás usando una VPN (generalmente desde la dirección IP), pero otros datos de sistema y navegador, aún pueden revelar información sobre ti y tu dispositivo (como tu zona horaria local, indicando de qué región operas)*
+        - *Muchas reseñas son patrocinadas, y por lo tanto sesgadas. Haz tu propia investigación, o ve con una de las opciones anteriores*
+        - *Usar [Tor](https://www.torproject.org) (u otra [Red Mix](/5_Privacy_Respecting_Software.md#mix-networks)) podría ser una mejor opción para anonimato*
+
+      furtherInfo: |
+        *Mientras eliges una VPN, considera lo siguiente: Política de logs (logs son malos),
+        Jurisdicción (evita 5-eyes), Número de servidores, disponibilidad y carga promedio.
+        Método de pago (métodos anónimos como BTC, Monero o efectivo son mejores),
+        Protección contra fugas (servidores DNS de 1ª parte = bueno, y verifica si IPv6 es soportado),
+        protocolos (OpenVPN y WireGuard = bueno). Finalmente, usabilidad de sus apps,
+        reseñas de usuarios y velocidades de descarga.*
+
+      notableMentions:
+        Si no confías en que un proveedor de VPN no mantenga logs, entonces podrías autoalojar tu propia VPN.
+        Esto te da control total, pero a costa de anonimato
+        (ya que tu proveedor de nube requerirá tu info de facturación).
+        Ver [Streisand](https://github.com/StreisandEffect/streisand), para aprender más y empezar a correr una VPN.
+        [Digital Ocean](https://m.do.co/c/3838338e7f79) proporciona VMs Linux flexibles,
+        seguras y fáciles (desde $0.007/hora o $5/mes),
+        Aquí hay un [script de instalación de 1 clic](http://dovpn.carlfriess.com/) para 
+        en [Digital Ocean](https://m.do.co/c/3838338e7f79), por Carl Friess.
+
+        Recientemente soluciones distribuidas autoalojadas para correr tus propias VPNs han
+        vuelto más populares, con servicios como [Outline](https://getoutline.org/)
+        permitiéndote lanzar tu propia instancia y compartirla con amigos y familia.
+        Dado que es distribuido, es muy resistente al bloqueo, y te da acceso mundial a internet libre y abierta. Y dado que tienes control total
+        sobre el servidor, puedes estar confiado de que no hay registro ni monitoreo ocurriendo.
+        Sin embargo, viene a costa de anonimato, especialmente si solo tú usas tu instancia.
+
+    ####
+    #### Seguridad de Red SH ####
+    ####
+    - name: Seguridad de Red Autoalojada
+      intro: >
+        Proyectos divertidos pequeños que puedes correr en un Raspberry Pi u otra computadora de bajo poder.
+        Para ayudar a detectar y prevenir amenazas, monitorear red y filtrar contenido
+
+      services:
+      - name: Pi-Hole
+        url: https://pi-hole.net
+        github: pi-hole/pi-hole
+        tosdrId: 9079
+        icon: https://wp-cdn.pi-hole.net/wp-content/uploads/2016/12/cropped-Vortex-R-192x192.png
+        description: |
+          Aplicación de bloqueo de anuncios y rastreadores de internet a nivel de red que actúa como un sumidero DNS.
+          Pi-Hole puede acelerar significativamente tu internet, remover anuncios y bloquear malware.
+          Viene con una interfaz web agradable y una app móvil con funciones de monitoreo, es de código abierto,
+          fácil de instalar y ampliamente usada.
+
+      - name: Technitium
+        url: https://technitium.com/dns
+        icon: https://technitium.com/favicon.ico
+        github: TechnitiumSoftware/DnsServer
+        description: |
+          Otro servidor DNS para bloquear contenido invasivo de privacidad en su fuente. Technitium no
+          requiere mucho setup, y básicamente funciona de inmediato, soporta una amplia gama de sistemas (y puede correr como app portátil en Windows). Te permite hacer
+          tareas adicionales, como agregar direcciones DNS locales y zonas con registros DNS específicos.
+          Comparado con Pi-Hole, Technitium es muy ligero, pero carece de los insights profundos que
+          Pi-Hole proporciona, y tiene una comunidad significativamente más pequeña detrás.
+
+      - name: IPFire
+        url: https://www.ipfire.org
+        github: ipfire/ipfire-2.x
+        icon: https://www.ipfire.org/static/img/apple-touch-icon-192x192-precomposed.png
+        description: |
+          Un firewall de código abierto endurecido, versátil y de vanguardia basado en Linux. Su facilidad de
+          uso, alto rendimiento y extensibilidad lo hacen usable para todos.
+
+      - name: PiVPN
+        url: https://pivpn.io
+        icon: https://www.pivpn.io/images/pivpnlogo.png
+        github: pivpn/pivpn
+        description: |
+          Una forma simple de configurar una VPN casera en cualquier servidor Debian. Soporta OpenVPN y WireGuard
+          con claves de encriptación de curva elíptica hasta 512 bits. Soporta múltiples proveedores DNS y
+          proveedores DNS personalizados - funciona bien junto a PiHole.
+
+      - name: E2guardian
+        url: http://e2guardian.org
+        icon: http://e2guardian.org/cms/images/banners/logo-guardian.png
+        github: e2guardian/e2guardian
+        description: |
+          Filtro de contenido web de código abierto poderoso.
+
+      - name: PF Sense
+        url: https://www.pfsense.org
+        icon: https://www.pfsense.org/img/apple-touch-icon.png
+        github: pfsense/pfsense
+        tosdrId: 6291
+        description: |
+          Firewall/router de código abierto ampliamente usado.
+
+      - name: Zeek
+        url: https://www.zeek.org
+        github: zeek/zeek
+        icon: https://zeek.org/wp-content/uploads/2019/09/favicon.ico
+        description: |
+          Detecta si tienes una computadora infectada con malware en tu red, y framework de análisis de red poderoso y monitor.
+
+      - name: Firezone
+        url: https://www.firezone.dev/
+        github: firezone/firezone
+        icon: https://www.firezone.dev/favicon.ico
+        description: |
+          VPN y firewall autoalojado de código abierto construido en WireGuard®.
+
+    ####
+    #### Redes Mix ####
+    ####
+    - name: Redes Mix
+      services:
+      - name: Tor
+        url: https://www.torproject.org
+        icon: https://www.torproject.org/static/images/favicon/favicon.ico
+        github: torproject/tor
+        tosdrId: 2845
+        description: |
+          Tor proporciona anonimato robusto, permitiéndote defenderte contra vigilancia, eludir censura y reducir rastreo.
+          Bloquea rastreadores, resiste huellas dactilares e implementa encriptación multicapa por defecto, lo que significa que puedes navegar libremente. Tor también permite acceso
+          a OnionLand: servicios ocultos.
+
+      - name: I2P
+        url: https://geti2p.net
+        icon: https://geti2p.net/_static/favicon.ico
+        openSource: true
+        description: |
+          I2P ofrece grandes transportes genéricos, está bien orientado al acceso a servicios ocultos,
+          y tiene un par de beneficios técnicos sobre Tor: amigable con P2P con túneles unidireccionales de corta vida,
+          es conmutado por paquetes (en lugar de conmutado por circuitos) con TCP y UDP, y perfila continuamente pares,
+          para seleccionar los de mejor rendimiento.
+          I2P es menos maduro, pero completamente distribuido y autoorganizado, su tamaño más pequeño significa que
+          no ha sido bloqueado ni DOSado mucho.
+
+      - name: Freenet
+        url: https://freenetproject.org
+        icon: https://www.hyphanet.org/favicon.ico
+        github: hyphanet/fred
+        description: |
+          Freenet es fácil de configurar, proporciona excelente Compartir Amigo a Amigo vs I2P, y es genial para
+          publicar contenido anónimamente. Es bastante grande en tamaño, y muy lento así que no es la mejor elección
+          para navegación casual.
+
+      notableMentions:
+      - name: GNUnet
+        url: https://gnunet.org/en
+      - name: IPFS
+        url: https://ipfs.io
+      - name: ZeroNet
+        url: https://zeronet.io
+      - name: Panoramix
+        url: https://panoramix-project.eu
+      - name: Nym
+        url: https://nymtech.net
+      wordOfWarning: |
+        Para proporcionar navegación de baja latencia, Tor no mezcla paquetes ni genera tráfico de cobertura.
+        Si un adversario es lo suficientemente poderoso, teóricamente podría observar toda la red,
+        o solo los nodos de entrada y salida de la víctima. Vale la pena mencionar, que aunque tu ISP
+        no puede ver qué estás haciendo, podrá determinar que estás usando una red mix,
+        para ocultar esto - una VPN podría usarse también.
+        Si estás haciendo algo que podría ponerte en riesgo, entonces buena OpSec es esencial,
+        ya que las autoridades han rastreado criminales a través de la red Tor antes,
+        y [hecho arrestos](https://techcrunch.com/2019/05/03/how-german-and-us-authorities-took-down-the-owners-of-darknet-drug-emporium-wall-street-market).
+        No dejes que Tor te dé una falsa sensación de seguridad - sé consciente de fugas de información a través de DNS, otros programas o error humano.
+        Los navegadores soportados por Tor podrían quedarse atrás de sus forks upstream, e incluir problemas explotables sin parchear.
+        Ver [#19](https://github.com/Lissy93/personal-security-checklist/issues/19)
+
+      furtherInfo: |
+        Tor, I2P y Freenet son todas redes de anonimato - pero funcionan muy diferente y cada una es buena para propósitos específicos.
+        Así que una buena solución viable sería usar todas, para diferentes tareas.
+        *Puedes leer más sobre cómo se compara I2P con Tor Browser, [aquí](https://blokt.com/guides/what-is-i2p-vs-tor-browser)*
+
+    ####
+    #### Proxies ####
+    ####
+    - name: Proxies
+      intro: |
+        Un proxy actúa como una puerta de enlace entre tú e internet, puede usarse para
+        actuar como firewall o filtro web, mejora la privacidad y también puede usarse para
+        proporcionar conexiones de red compartidas y cachear datos para acelerar solicitudes comunes.
+        **Nunca uses un [proxy gratuito](https://whatismyipaddress.com/free-proxies).**
+      services:
+      - name: ShadowSocks
+        url: https://shadowsocks.org
+        github: shadowsocks/shadowsocks-rust
+        icon: https://avatars.githubusercontent.com/u/3006190
+        description: |
+          Proxy socks5 seguro, diseñado para proteger tu tráfico de Internet. De código abierto, super rápido,
+          multiplataforma y fácil de desplegar, ver [repo GitHub](https://github.com/shadowsocks).
+
+      - name: Privoxy
+        url: https://www.privoxy.org
+        icon: https://www.privoxy.org/images/privoxy.png
+        openSource: true
+        description: |
+          Proxy web no cacheante con capacidades avanzadas de filtrado para mejorar la privacidad,
+          modificar datos de páginas web y cabeceras HTTP, controlar acceso y remover anuncios y
+          otra basura de Internet.
+
+      notableMentions: |
+        [V2ray-core](https://github.com/v2ray/v2ray-core) es una plataforma para construir
+        proxies para evadir restricciones de red y proteger tu privacidad.
+        Ver [más](https://github.com/hugetiny/awesome-vpn)
+      wordOfWarning: |
+        [Proxies Maliciosos](https://www.defcon.org/images/defcon-17/dc-17-presentations/defcon-17-edward_zaborowski-doppelganger.pdf) son demasiado comunes.
+        Siempre usa software de código abierto, alójalo tú mismo o paga por un servicio en la nube reputable.
+        Nunca uses un proxy gratuito; puede monitorear tu conexión, robar cookies y contener malware.
+        Las VPN son una mejor opción, mejor aún - usa la red Tor.
+
+    ####
+    #### Proveedores DNS ####
+    ####
+    - name: Proveedores DNS
+      alternativeTo: ['google dns', 'cloudflare', 'quad9', 'opendns', 'norton connectsafe']
+      intro: |
+        Sin usar un DNS seguro y centrado en privacidad, todas tus solicitudes web pueden verse
+        en claro. Deberías configurar tus consultas DNS para ser gestionadas por
+        un servicio que respete la privacidad y soporte DNS-over-TLS, DNS-over-HTTPS o DNSCrypt.
+      services:
+      - name: CloudFlare
+        url: https://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1
+        icon: https://developers.cloudflare.com/assets/icon-512x512-fe4c8fe4.png
+        securityAudited: true
+        tosdrId: 893
+        description: |
+          Una de las opciones más performantes, el DNS de Cloudflare soporta DoH y DoT, y tiene una implementación Tor,
+          proporcionando protección de clase mundial. Tienen apps nativas multiplataforma,
+          para setup fácil.
+
+      - name: AdGuard
+        url: https://adguard.com/en/adguard-dns/overview.html
+        icon: https://cdn.adguard.info/website/adguard-dns.io/favicon.svg
+        tosdrId: 2776
+        description: |
+          Proveedor DNS de código abierto, especializado en el bloqueo de anuncios, rastreadores y dominios maliciosos.
+          Han sido auditados independientemente y no mantienen logs.
+
+      - name: NextDNS
+        url: https://nextdns.io
+        icon: https://nextdns.io/favicon.ico
+        tosdrId: 1959
+        description: |
+          Un DNS de bloqueo de anuncios, protección de privacidad y elusión de censura. También viene con analíticas, y
+          la habilidad de proteger a niños de contenido adulto.
+      wordOfWarning: |
+        Usar un resolvedor DNS encriptado no te hará anónimo, solo hace
+        más difícil para terceros descubrir tu historial de dominios.
+        Si estás usando una VPN, haz una [prueba de fuga DNS](https://www.dnsleaktest.com/),
+        para asegurar que algunas solicitudes no se expongan.
+      furtherInfo: |
+        #### Protocolos DNS
+
+        DNS-over-TLS fue propuesto en [RTC-7858](https://tools.ietf.org/html/rfc7858)
+        por el IETF, luego 2 años después, la especificación DNS-over-HTTPS fue delineada
+        en [RFC8484](https://tools.ietf.org/html/rfc8484) en octubre '18.
+        [DNSCrypt](https://dnscrypt.info/), es un protocolo que autentica comunicaciones
+        entre un cliente DNS y un resolvedor DNS. Previene spoofing DNS, a través de
+        usar firmas criptográficas para verificar que las respuestas originen del
+        resolvedor DNS elegido, y no hayan sido manipuladas. DNSCrypt es un protocolo bien
+        probado en batalla, que ha estado en uso desde 2013, y aún es ampliamente usado.
+      notableMentions:
+      - name: Quad9
+        url: https://www.quad9.net
+        description: >
+          Un DNS bien financiado y performante con fuerte enfoque en privacidad y seguridad
+          y setup fácil, sin embargo se han planteado preguntas sobre la motivación
+          de algunos de los respaldadores financieros.
+      - name: BlahDNS
+        url: https://blahdns.com
+        description: (Japón, Finlandia o Alemania) es un DNS excelente enfocado en seguridad
+      - name: OpenNIC
+        url: https://www.opennic.org/
+        description: >
+          [NixNet DNS](https://nixnet.services/dns) y [UncensoredDNS](https://blog.uncensoreddns.org)
+          son DNS de código abierto y democráticos, enfocados en privacidad
+      - name: Unbound
+        url: https://nlnetlabs.nl/projects/unbound/about
+        description: >
+          Un resolvedor DNS validante, recursivo, cacheante, diseñado para ser rápido y ligero.
+          Incorpora funciones modernas y basado en estándares abiertos
+      - name: Clean Browsing
+        url: https://cleanbrowsing.org
+        description: >
+          Una buena opción para proteger a niños, ofrecen Filtrado de Contenido basado en DNS comprehensivo
+      - name: Mullvad
+        url: https://mullvad.net/en/help/dns-over-https-and-dns-over-tls
+        description: >
+          DNS público de Mullvad con minimización QNAME y bloqueo básico de anuncios.
+          Ha sido auditado por expertos en seguridad de Assured.
+          Puedes usar este servicio que mejora la privacidad incluso si no usas Mullvad.
+
+    ####
+    #### Clientes DNS ####
+    ####
+    - name: Clientes DNS
+      services:
+      - name: DNScrypt-proxy 2
+        followWith: Escritorio [BSD, Linux, Solaris, Windows, MacOS & Android]
+        url: https://dnscrypt.info
+        icon: https://dnscrypt.info/favicon.ico
+        github: DNSCrypt/dnscrypt-proxy
+        description: |
+          Un proxy DNS flexible, con soporte para protocolos DNS encriptados modernos incluyendo DNScrypt V2,
+          DNS-over-HTTPS y DNSCrypt Anonimizado. También permite monitoreo avanzado, filtrado, cacheo
+          y protección de IP de cliente a través de Tor, proxies SOCKS o relays DNS Anonimizados.
+
+      - name: Unbound
+        url: https://nlnetlabs.nl/projects/unbound
+        icon: https://nlnetlabs.nl/extra/favicons/favicon-196x196.png
+        github: NLnetLabs/unbound
+        tosdrId: 2519
+        followWith: Escritorio [Linux, Mac, OpenWrt & Windows]
+        description: |
+          Resolvedor DNS validante, recursivo, cacheante con soporte para DNS-over-TLS. Diseñado para ser rápido,
+          ligero y seguro, Unbound incorpora funciones modernas basadas en estándares abiertos. Es completamente de código abierto,
+          y recientemente auditado. (Para un tutorial en profundidad, ver este artículo por DNSWatch.)
+
+      - name: Nebulo
+        github: Ch4t4r/Nebulo
+        url: https://nebulo.app
+        icon: https://raw.githubusercontent.com/Ch4t4r/Nebulo/master/app/src/main/res/mipmap-xxhdpi/ic_launcher.png
+        openSource: true
+        followWith: Android
+        description: |
+          Cambiador DNS sin root, de tamaño pequeño utilizando DNS-over-HTTPS y DNS-over-TLS. (Nota, ya que usa la API VPN de Android, no es posible correr una VPN mientras usas Nebulo.)
+
+      - name: RethinkDNS & Firewall
+        url: https://rethinkdns.com/app
+        github: celzero/rethink-app
+        icon: https://rethinkdns.com/ico/app_icon.svg
+        followWith: Android
+        tosdrId: 4691
+        androidApp: com.celzero.bravedns
+        description: |
+          Cambiador DNS gratuito y de código abierto con soporte para DNS-over-HTTPS, DNS-over-Tor y DNSCrypt v3
+          con Relays Anonimizados. (Nota, ya que usa la API VPN de Android, no es posible correr una
+          VPN mientras usas RethinkDNS + Firewall.)
+
+      - name: DNS Cloak
+        url: https://apps.apple.com/us/app/dnscloak-secure-dns-client/id1452162351
+        github: s-s/dnscloak
+        followWith: iOS
+        icon: https://github.com/s-s/dnscloak/blob/master/src/images/logo.png?raw=true
+        description: |
+          App simple que permite el uso de dnscrypt-proxy 2 en un iPhone.
+
+      - name: Stubby
+        url: https://dnsprivacy.org/wiki/display/DP/DNS+Privacy+Daemon+-+Stubby
+        icon: https://dnsprivacy.org/images/favicon.png
+        github: getdnsapi/stubby
+        followWith: Escritorio [Linux, Mac, OpenWrt & Windows]
+        description: |
+          Actúa como un resolvedor stub de Privacidad DNS local (usando DNS-over-TLS). Stubby encripta consultas DNS enviadas
+          desde una máquina cliente (escritorio o laptop) a un resolvedor de Privacidad DNS aumentando la privacidad del usuario final.
+          Stubby puede usarse en combinación con Unbound - Unbound proporciona un caché local y Stubby gestiona las conexiones TLS upstream (ya que Unbound aún no puede reutilizar conexiones TCP/TLS),
+          ver configuración de ejemplo.
+
+    ####
+    #### Firewalls ####
+    ####
+    - name: Firewalls
+      intro: |
+        Un firewall es un programa que controla el tráfico de red entrante y saliente, basado en reglas predeterminadas de seguridad.
+        Establece una barrera entre una red interna confiable y redes externas no confiables.
+        Nota: esta sección está incompleta, ya que el contenido original se truncó.
