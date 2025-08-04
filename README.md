@@ -7,7 +7,7 @@ A continuación, se presenta el contenido del archivo YAML reformulado en format
 **Nota**:
 El contenido sigue en proceso. Cualquier contribución es bienvenida. 
 
-![Privacidad](imagenes/cerradura.png)
+![Privacidad](imagenes/privacidad.png)
 
 
 ## Alternativas populares a evitar:
