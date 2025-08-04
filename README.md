@@ -400,3 +400,29 @@ Sin usar un DNS seguro y centrado en privacidad, todas tus solicitudes web puede
 - **CloudFlare**: Una de las opciones más performantes, el DNS de Cloudflare soporta DoH y DoT, y tiene una implementación Tor, proporcionando protección de clase mundial. Tienen apps nativas multiplataforma, para setup fácil.
 - **AdGuard**: Proveedor DNS de código abierto, especializado en el bloqueo de anuncios, rastreadores y dominios maliciosos. Soporta DNS-over-TLS y DNS-over-HTTPS.
 - **Quad9**: Un DNS bien financiado con fuerte enfoque en privacidad y seguridad y setup fácil, sin embargo se han planteado preguntas sobre la motivación de algunos de los respaldadores financieros.
+
+
+#### Digital Notes
+- **[Standard Notes](https://standardnotes.com/)**: es una aplicación gratuita, de código abierto y completamente encriptada. Tiene una ui simple, Sin embargo, se incluyen muchas características, gracias a la tienda Extensions, que permite: listas de tareas pendientes, hojas de cálculo, Texto rico, Markdown, editor de matemáticas, editor de código y muchos más. Puedes elegir entre varios temas (¡sí, modo oscuro!), Y cuenta con una tienda de archivos segura incorporada, etiquetas/ carpetas, búsqueda rápida y más. Notas estándar se desarrolla activamente y de código abierto. 
+- **[Obsidian](https://obsidian.md/)**: Una poderosa base de conocimiento que funciona en la parte superior de los archivos locales de markdown de texto simple. Tiene un fuerte comunidad y muchos complementos y temas. Generalmente que respeta la privacidad, pero no cifrado fuera de la caja, y parte del código está ofuscado o no de código abierto completamente abierto.
+
+#### Almacenamiento cifrado en la nube
+
+- **[Tresorit](https://tresorit.com/)**:  Proveedor de almacenamiento, sincronización y compartición de archivos de conocimiento cero cifrados de extremo a extremo, con sede en Suiza. La aplicación es multiplataforma, un cliente fácil de usar y con todas las características esperadas. £6,49/mes para 500 GB.
+- **[Icedrive](https://icedrive.net/)**: Proveedor de almacenamiento cifrado muy asequible, con aplicaciones multiplataforma. Comienza como £1,50/mes para 150 GB o £3,33/mes por 1 TB.
+- **[Sync](https://www.sync.com/)**: Sincronización, intercambio, colaboración y copia de seguridad seguros de archivos para particulares, pequeñas empresas y profesionales individuales. Comienza en $8/mes por 2 TB.
+- **[Internxt](https://internxt.com/es)**: Almacene sus archivos con total privacidad. Internxt Drive es un servicio de almacenamiento en la nube de conocimiento cero basado en lo mejor de su clase Privacidad y seguridad. Fabricado en España. Aplicaciones móviles y de escritorio de código abierto. 10 GB GRATIS y planes pagos a partir de €0,99/mes para 20 GB. Tienen opción de planes de por vida.  
+
+
+#### Administradores PGP
+
+- **[Kelopatra](https://apps.kde.org/es/kleopatra/)**: Aplicación para gestionar claves de cifrado y contraseñas, integrada con el llavero GNOME.
+- **[GPG4Win](https://www.gpg4win.org/)**: Kleopatra para Windows.
+- **[Suite GPG](https://gpgtools.org/)**: Sucesor de MacGPG. Funciona bien con aplicaciones de MacOS, como Finder, Appple Mail, Keychain y Spotlight. Hace que cifrar archivos, correos electrónicos y mensajes / datos sea muy fácil. Así como GUI para generar claves, verificar firmas, etc.
+- **[Openkeychain](https://www.openkeychain.org/)**: Aplicación de Android para administrar claves y cifrar mensajes. Funciona tanto de forma independiente como integrado en otras aplicaciones, incluida k9-Mail. Todo se puede hacer a través de una GUI sencilla pero potente. Código abierto, seguridad auditada, permisos transparentes y mantenimiento activo.
+- **[FlowCrypt](https://flowcrypt.com/)**: Extensión de navegador para usar PGP dentro de Gmail, para Chrome y Firefox. Versión móvil compatible con Android e iOS.
+- **[Mailvelope](https://mailvelope.com/en)**: Mailvelope es un complemento para aplicaciones de correo electrónico que hace que el uso de PGP sea muy fácil para principiantes. Puedes utilizar el alojamiento versión gratuita u opte por alojar su propia instancia. Funciona con Gmail, Yahoo, Outlook, GMX, Posteo, Web.de, FreeNet.de, Mailbox.org y muchos otros.
+
+Continuará...
+
+
