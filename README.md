@@ -7,18 +7,21 @@ A continuación, se presenta el contenido del archivo YAML reformulado en format
 **Nota**:
 El contenido sigue en proceso. Cualquier contribución es bienvenida. 
 
-## Categorías
+![Privacidad](imagenes/cerradura.png)
 
-### Esenciales
 
-Herramientas básicas para la privacidad: gestores de contraseñas, autenticación de dos factores, encriptación de archivos, navegadores y motores de búsqueda.
-
-Alternativas populares a evitar:
+## Alternativas populares a evitar:
 - Gestores de contraseñas: LastPass, 1Password, Dashlane, NordPass, RoboForm.
 - Autenticación de 2 factores: Google Authenticator, Authy, Microsoft Authenticator, LastPass Authenticator, Duo Mobile.
 - Encriptación de archivos: BitLocker, FileVault, AxCrypt, WinRAR.
 - Navegadores: Chrome, Safari, Firefox, Edge, Opera.
 - Motores de búsqueda: Google, Bing, Yahoo, Baidu, Yandex.
+
+## Categorías
+
+### Esenciales
+
+Herramientas básicas para la privacidad: gestores de contraseñas, autenticación de dos factores, encriptación de archivos, navegadores y motores de búsqueda.
 
 #### Gestores de Contraseñas
 
