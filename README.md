@@ -1,4 +1,4 @@
-# Privacidad Asombrosa (traducido a Español)
+# Privacidad Asombrosa (v. en Español)
 
 El archivo en inglés está licenciado bajo CC0-1.0 por Alicia Sykes (2019-2024) en el repositorio: [awesome-privacy](https://github.com/Lissy93/awesome-privacy)
 
