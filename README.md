@@ -5,7 +5,7 @@ El archivo en inglés del cual se inspiró el presente proyecto está licenciado
 Se presenta el contenido del archivo YAML reformulado en formato Markdown, con descripciones, menciones notables, advertencias y ediciones del editor.
 
 **Nota**:
-El contenido sigue en proceso. Cualquier contribución es bienvenida. 
+El contenido se mantiene en constante actualización. Cualquier contribución es bienvenida. 
 
 ![Privacidad](imagenes/privacidad.png)
 
@@ -14,7 +14,7 @@ El contenido sigue en proceso. Cualquier contribución es bienvenida.
 - Gestores de contraseñas: LastPass, 1Password, Dashlane, NordPass, RoboForm.
 - Autenticación de 2 factores: Google Authenticator, Authy, Microsoft Authenticator, LastPass Authenticator, Duo Mobile.
 - Encriptación de archivos: BitLocker, FileVault, AxCrypt, WinRAR.
-- Navegadores: Chrome, Safari, Firefox, Edge, Opera.
+- Navegadores: Chrome, Safari, Firefox (sin extensiones), Edge, Opera.
 - Motores de búsqueda: Google, Bing, Yahoo, Baidu, Yandex.
 
 ## Categorías
@@ -59,8 +59,8 @@ Verifica sitios en [2fa.directory](https://2fa.directory).
 
 - **[VeraCrypt](https://www.veracrypt.fr)**: Código abierto multiplataforma para archivos/discos, rico en funciones, CLI/portátil (sucesor TrueCrypt).
 - **[Cryptomator](https://cryptomator.org/)**: Encriptación cliente para nube, preserva estructura, apps móviles (Windows/Linux/Mac).
-- **Age**: CLI simple, moderna, segura con claves pequeñas, estilo UNIX.
-- **Picocrypt**: Pequeña, simple, enfocada en seguridad y confiabilidad.
+- **[Age](https://github.com/FiloSottile/age)**: CLI simple, moderna, segura con claves pequeñas, estilo UNIX.
+- **[Picocrypt](https://github.com/Picocrypt/Picocrypt)**: Pequeña, simple, enfocada en seguridad y confiabilidad.
 
 **Advertencia**: Elige multiplataforma; contraseñas débiles o malware comprometen seguridad. Sigue prácticas básicas.
 
@@ -90,9 +90,9 @@ Verifica sitios en [2fa.directory](https://2fa.directory).
 
 - **[DuckDuckGo](https://duckduckgo.com/)**: Sin rastreadores/cookies/anuncios, personalizable, .onion, sin JS.
 - **[Qwant](https://www.qwant.com/)**: Agrega Bing + propios, sin cookies/rastreadores, no sesgados.
-- **[Startpage](https://www.startpage.com/es/)**: Busca Google, reorganiza con privacidad (no código abierto).
 - **[Brave](https://brave.com/es/)**: Sin rastreo, índice propio, sin algoritmos secretos.
 - **[Mojeek](https://www.mojeek.com/)**: Resultados independientes, cero rastreo (no código abierto).
+- **[Starpage](https://www.startpage.com/)**: Una forma más segura de buscar y navegar en línea sin la recopilación, el seguimiento ni la identificación de datos personales (no código abierto).
 
 **Menciones**: MetaGear, YaCy, Searx (autoalojables, instancias en searx.space); SearxNG (fork).
 
@@ -101,7 +101,7 @@ Verifica sitios en [2fa.directory](https://2fa.directory).
 
 Categoría con mensajería encriptada, P2P, email encriptado, clientes de email, reenvío de email, herramientas de seguridad de email, clientes VOIP, números de teléfono virtuales y colaboración en equipo.
 
-Alternativas populares a **EVITAR**:
+Alternativas a *EVITAR*:
 
 - Mensajería: WhatsApp, Facebook Messenger, WeChat, Telegram, Snapchat, Viber, Line, Discord.
 - Email: Gmail, Outlook, Yahoo Mail, iCloud Mail, AOL Mail, Zoho Mail.
@@ -109,10 +109,10 @@ Alternativas populares a **EVITAR**:
 - VOIP: Skype, Zoom, Google Meet, Microsoft Teams, Cisco Webex, Gotomeeting.
 - Números virtuales: Google Voice, Grasshopper, RingCentral, Sideline, Burner.
 - Colaboración: Slack, Microsoft Teams, Google Chat, Discord, Asana, Trello, Basecamp.
+*Advertencia**: Apps como WhatsApp/Telegram/Threema no son código abierto; no uses para datos sensibles. 
 
 
-
-#### Mensajería Encriptada
+#### Mensajería Encriptada:
 
 - **[Signal](https://signal.org/es/)**: Encriptación fuerte (Protocolo Signal), multimedia, llamadas, multiplataforma, código abierto. Probablemente una de las apps de mensajería privada más populares y seguras que combina encriptación fuerte (ver [Protocolo Signal](https://en.wikipedia.org/wiki/Signal_Protocol)) con una interfaz simple y muchas funciones. Es ampliamente usada en todo el mundo, y fácil de usar, funcionando similar a WhatsApp - con mensajería instantánea, recibos de lectura, soporte para adjuntos multimedia y permite llamadas de voz y video de alta calidad. Es multiplataforma, de código abierto y totalmente gratuita. Signal es [recomendado](https://twitter.com/Snowden/status/661313394906161152) por Edward Snowden, y es una solución perfecta para la mayoría de usuarios.
 - **[Session](https://getsession.org/)**: Session es un fork de Signal, sin embargo, a diferencia de Signal, no requiere un número de móvil (ni ningún otro dato personal) para registrarse, en su lugar cada usuario es identificado por una clave pública. Es descentralizado, con servidores administrados por la comunidad a través de [Loki Net](https://loki.network), los mensajes se encriptan y enrutan a través de varios de estos nodos. Todas las comunicaciones son E2E encriptadas, y no hay metadatos.
@@ -121,8 +121,6 @@ Alternativas populares a **EVITAR**:
 - **[Matrix](https://matrix.org/)**: Matrix es una red abierta descentralizada para comunicaciones seguras, con E2E encriptación con Olm y Megolm. Junto con el cliente [Element](https://element.io/), soporta llamadas VOIP + video y mensajería instantánea + chats grupales. Dado que Matrix tiene una especificación abierta y una API RESTful HTTP/JSON pragmática simple, facilita la integración con IDs de terceros existentes para autenticar y descubrir usuarios, así como construir apps sobre ella.
 
 **Menciones**: Chat Secure, KeyBase (no actualizado desde 2020); OpenPGP (para email, no fácil para principiantes).
-
-**Advertencia**: Apps como WhatsApp/Telegram/Threema no son código abierto; no uses para datos sensibles. 
 
 #### Mensajería P2P
 
@@ -135,11 +133,12 @@ Con redes [Peer-to-Peer](https://en.wikipedia.org/wiki/Peer-to-peer), no hay ser
 
 **Menciones**: Cwtch, BitMessage, RetroShare.
 
-
 **Menciones notables**:
 - Chat Secure
 - KeyBase: Permite chat en tiempo real encriptado, chats grupales, y compartir archivos públicos y privados. También tiene funciones útiles para probar identidades sociales criptográficamente, y facilita firmar, encriptar y desencriptar mensajes con PGP. Sin embargo, desde que fue [adquirido por Zoom](https://keybase.io/blog/keybase-joins-zoom) en 2020, ya no recibe actualizaciones regulares.
-- OpenPGP: Puede usarse sobre redes de chat existentes (como email o foros). Proporciona privacidad criptográfica y autenticación, PGP se usa para encriptar mensajes. **Nota/ Problemas con PGP** PGP [no es fácil](https://restoreprivacy.com/let-pgp-die/) de usar para principiantes, y podría llevar a errores humanos/ equivocaciones, lo que sería mucho peor que usar un sistema alternativo más simple. No uses [IDs de clave de 32 bits](https://evil32.com/) - son demasiado cortos para ser seguros. También se han encontrado vulnerabilidades en OpenPGP y S/MIME, definidas en [EFAIL](https://efail.de/), así que aunque se considera seguro para uso general, para chat general, podría ser mejor usar una app de mensajería o email encriptada en su lugar.
+- OpenPGP: Puede usarse sobre redes de chat existentes (como email o foros). Proporciona privacidad criptográfica y autenticación, PGP se usa para encriptar mensajes.
+
+**Nota/ Problemas con PGP** PGP [no es fácil](https://restoreprivacy.com/let-pgp-die/) de usar para principiantes, y podría llevar a errores humanos/ equivocaciones, lo que sería mucho peor que usar un sistema alternativo más simple. No uses [IDs de clave de 32 bits](https://evil32.com/) - son demasiado cortos para ser seguros. También se han encontrado vulnerabilidades en OpenPGP y S/MIME, definidas en [EFAIL](https://efail.de/), así que aunque se considera seguro para uso general, para chat general, podría ser mejor usar una app de mensajería o email encriptada en su lugar.
 
 **Advertencia**: Muchas apps de mensajería afirman ser seguras, pero si no son de código abierto, esto no puede verificarse - y **no deberían confiarse**. Esto aplica a [Telegram](https://telegram.org), [Threema](https://threema.ch), [Cypher](https://www.goldenfrog.com/cyphr), [Wickr](https://wickr.com/), [Silent Phone](https://www.silentcircle.com/products-and-solutions/silent-phone/) y [Viber](https://www.viber.com/), por nombrar algunos - estas apps no deberían usarse para comunicar datos sensibles. [Wire](https://wire.com/) también ha sido removido, debido a una [adquisición reciente](https://blog.privacytools.io/delisting-wire/).
 
@@ -163,6 +162,7 @@ Para una comparación más detallada de proveedores de email, ver [email-compari
 - StartMail
 - Posteo
 - Disroot
+- Fastmail (no es de código abierto)
 
 **Advertencia**:
 - Al usar una tecnología de encriptación de extremo a extremo como OpenPGP, algunos metadatos en la cabecera del email no se encriptarán.
@@ -172,7 +172,7 @@ Para una comparación más detallada de proveedores de email, ver [email-compari
 
 Los clientes de email son los programas usados para interactuar con el servidor de email. Para email alojado, las interfaces web y móviles proporcionadas por tu servicio de email suelen ser adecuadas, y podrían ser la opción más segura. Para email autoalojado, necesitarás instalar y configurar clientes de email para web, escritorio o móvil. Un beneficio de usar un cliente IMAP es que siempre tendrás una copia de seguridad offline de todos los mensajes de email (que luego pueden encriptarse y archivarse), y muchas aplicaciones te permiten agregar múltiples buzones para conveniencia. Los clientes de email de escritorio no son vulnerables a los ataques comunes de navegador que sus contrapartes web sí lo son.
 
-- **[Mozilla Thunderbird](https://www.thunderbird.net/es-ES/)**: Aplicación de email gratuita y de código abierto desarrollada y respaldada por Mozilla - es segura, privada, fácil y personalizable. A partir de V 78.2.1, la encriptación está integrada, y la extensión [TorBirdy](https://trac.torproject.org/projects/tor/wiki/torbirdy) enruta todo el tráfico a través de la red Tor. Forks como [Betterbird](https://github.com/Betterbird/thunderbird-patches) podrían agregar funciones adicionales.
+- **[Mozilla Thunderbird](https://www.thunderbird.net/es-ES/)**: Aplicación de email gratuita y de código abierto desarrollada y respaldada por Mozilla - es segura, privada, fácil y personalizable. A partir de V 78.2.1, la encriptación está integrada, y la extensión [TorBirdy](https://trac.torproject.org/projects/tor/wiki/torbirdy) enruta todo el tráfico a través de la red Tor. Forks como [Betterbird](https://github.com/Betterbird/thunderbird-patches) podrían agregar funciones adicionales. Se comunicó que ofrecerá su propio servicio de correo.
 - **[eM Client](https://www.emclient.com/)**: Cliente de email basado en productividad, para Windows y MacOS. eM Client tiene una interfaz de usuario limpia, rendimiento rápido y buena compatibilidad. Hay una versión paga, con algunas funciones útiles, incluyendo posponer emails entrantes, vigilar respuestas para un hilo específico, traducción de mensajes, enviar después, y Calendario, Tareas, Contactos y Notas integrados. Nota, eM Client es propietario, no de código abierto.
 - **[SnappyMail](https://snappymail.eu/)**: Cliente de email web simple, moderno y rápido. Es un fork solo IMAP de [RainLoop](http://www.rainloop.net) que mitiga una severa [vulnerabilidad de RainLoop](https://thehackernews.com/2022/04/unpatched-bug-in-rainloop-webmail-could.html) y agrega varias nuevas [funciones](https://snappymail.eu/comparison).
 - **[RoundCube](https://roundcube.net/)**: Cliente IMAP multilingüe basado en navegador con una interfaz de usuario similar a una aplicación. Proporciona toda la funcionalidad que esperarías de un cliente de email, incluyendo soporte MIME, libreta de direcciones, manipulación de carpetas, búsqueda de mensajes y corrección ortográfica.
@@ -185,7 +185,7 @@ Los clientes de email son los programas usados para interactuar con el servidor 
 
 #### Reenvío de Email
 
-Revelar tu dirección de email real en línea puede ponerte en riesgo. El aislamiento de email permite que los mensajes enviados a [quiensea]@un-dominio.com lleguen a tu bandeja principal. Esto protege tu dirección de email real de ser revelada. Los aliases se generan automáticamente la primera vez que se usan. Este enfoque te permite identificar qué proveedor filtró tu dirección de email, y bloquear un alias con un clic.
+Revelar tu dirección de email real en línea puede ponerte en riesgo. El aislamiento de email permite que los mensajes enviados a [quiensea]@tudominio.com lleguen a tu bandeja principal. Esto protege tu dirección de email real de ser revelada. Los aliases se generan automáticamente la primera vez que se usan. Este enfoque te permite identificar qué proveedor filtró tu dirección de email, y bloquear un alias con un clic.
 
 - **[Addy](https://addy.io/)**: Un servicio de reenvío de email anónimo de código abierto, que te permite crear aliases de email ilimitados. Tiene un plan gratuito.
 - **[33Mail](https://33mail.com/)**: Un servicio de aliasing de larga data. Además de recibir, 33Mail también te permite responder a direcciones reenviadas de manera anónima. Plan gratuito, así como plan Premium ($1/mes) si quieres usar un dominio personalizado. Nota que 33Mail usa Google Analytics.
@@ -230,6 +230,7 @@ Ahora más que nunca dependemos de software para ayudar con la colaboración en 
 
 **Menciones notables**: Algunas plataformas de chat permiten chats grupales multiplataforma, conferencias de voz y video, pero sin las funciones adicionales de colaboración. Por ejemplo, [Tox](https://tox.chat/), [Session](https://getsession.org/), [Ricochet](https://ricochet.im/), [Mumble](https://www.mumble.info/) y [Jami](https://jami.net/). Para Conferencias, [OSEM](https://osem.io) es una herramienta de gestión de conferencias todo en uno de código abierto, proporcionando Registro, Horarios, Sesiones en Vivo y Grabadas, Envíos de Papers, Páginas de Marketing y Administración.
 
+
 ### Herramientas de Seguridad
 
 #### Extensiones de Navegador
@@ -273,6 +274,7 @@ Las siguientes extensiones de navegador te dan mejor control sobre qué contenid
 - En la mayoría de situaciones, solo unas pocas de las extensiones anteriores serán necesarias en combinación.
 - Ver el [wiki de arkenfox](https://github.com/arkenfox/user.js/wiki/4.1-Extensions) para más información sobre la obsolescencia e inutilidad de muchas extensiones populares, y por qué podrías necesitar solo un conjunto muy limitado.
 
+
 #### Apps Móviles
 
 - **Orbot**: Proxy Tor a nivel de sistema, que encripta tu conexión a través de múltiples nodos. También puedes usarlo junto con Tor Browser para acceder a sitios .onion.
@@ -285,7 +287,7 @@ Las siguientes extensiones de navegador te dan mejor control sobre qué contenid
 - **SuperFreezZ**: Hace posible congelar completamente todas las actividades de fondo por app. Propósito intencionado es acelerar tu teléfono y prolongar la vida de la batería, pero esta app es también una gran utilidad para detener ciertas apps de recolectar datos y rastrear tus acciones mientras corren en segundo plano. Ver en [F-Droid](https://f-droid.org/en/packages/superfreeze.tool.android).
 - **Haven**: Te permite protegerte a ti mismo, tu espacio personal y tus posesiones - sin comprometer la seguridad. Aprovechando sensores del dispositivo para monitorear el espacio cercano, Haven fue desarrollado por The Guardian Project, en asociación con Edward Snowden.
 - **Secure Task**: Activa acciones cuando se cumplen ciertas condiciones de seguridad, como múltiples intentos de login fallidos o cambios en configuraciones de monitor. Requiere Tasker, y necesita configurarse con ADB, el dispositivo no necesita ser rooteado.
-- **Cryptomator**: Encripta archivos y carpetas del lado del cliente, antes de subirlos a almacenamiento en la nube (como Google Drive, One Drive o Dropbox), lo que significa que ninguno de tus documentos personales sale de tu dispositivo en texto plano.
+- **[Cryptomator](https://cryptomator.org/downloads/#android)**: Encripta archivos y carpetas del lado del cliente, antes de subirlos a almacenamiento en la nube (como Google Drive, One Drive o Dropbox), lo que significa que ninguno de tus documentos personales sale de tu dispositivo en texto plano.
 - **1.1.1.1**: Te permite usar el DNS rápido y seguro 1.1.1.1 de CloudFlare, con DNS over HTTPS, y también tiene la opción de habilitar el VPN WARP+ de CloudFlare.
 - **Fing App**: Un escáner de red para ayudarte a monitorear y asegurar tu red WiFi. La app es totalmente gratuita, pero para usar los controles avanzados, necesitarás un Fing Box.
 - **DPI Tunnel**: Una aplicación para Android que usa varias técnicas para evadir sistemas DPI (Deep Packet Inspection), que se usan para bloquear algunos sitios (no disponible en Play Store).
@@ -301,7 +303,7 @@ Las siguientes extensiones de navegador te dan mejor control sobre qué contenid
 - **RethinkDNS & Firewall**: Una app de bloqueo de anuncios y firewall de código abierto para Android 6+ (no requiere root).
 - **F-Droid**: F-Droid es un catálogo instalable de aplicaciones FOSS para Android. El cliente te permite navegar, instalar y mantener actualizaciones en tu dispositivo.
 
-**Advertencia**: Demasiadas apps instaladas aumentarán tu superficie de ataque - solo instala aplicaciones que necesites. Asegúrate de verificar los permisos y qué datos tiene acceso una app antes de instalar. Solo instala de fuentes oficiales.
+**Advertencia**: Demasiadas apps instaladas aumentarán tu riesgo de ataque - solo instala aplicaciones que necesites. Asegúrate de verificar los permisos y qué datos tiene acceso una app antes de instalar. Solo instala de fuentes oficiales.
 
 **Menciones notables**: Para más apps de seguridad y privacidad de código abierto, revisa estos publicadores: [The Guardian Project](https://guardianproject.info) ([Play Store](https://play.google.com/store/apps/dev?id=6502754515281796553), [F-Droid](https://search.f-droid.org/?q=guardianproject)), [The Tor Project](https://www.torproject.org/) ([Play Store](https://play.google.com/store/apps/developer?id=The+Tor+Project), [F-Droid](https://search.f-droid.org/?q=torproject)), [Oasis Feng](https://github.com/oasisfeng) ([Play Store](https://play.google.com/store/apps/dev?id=7664242523989527886)), [FairCode (Marcel Bokhorst)](https://www.faircode.eu/) ([Play Store](https://play.google.com/store/apps/dev?id=8420080860664580239), [F-Droid](https://search.f-droid.org/?q=faircode)), [SECUSO Research Group](https://secuso.aifb.kit.edu/english/105.php) ([Play Store](https://play.google.com/store/apps/developer?id=SECUSO+Research+Group&hl=en_US), [F-Droid](https://search.f-droid.org/?q=secuso)), y [Fossify](https://www.fossify.org) ([Play Store](https://play.google.com/store/apps/dev?id=9070296388022589266), [F-Droid](https://search.f-droid.org/?q=fossify)) - todos son desarrolladores u organizaciones confiables, que han hecho un trabajo increíble.
 
@@ -396,6 +398,7 @@ Un proxy actúa como una puerta de enlace entre tú e internet, puede usarse par
 
 **Advertencia**: [Proxies Maliciosos](https://www.defcon.org/images/defcon-17/dc-17-presentations/defcon-17-edward_zaborowski-doppelganger.pdf) son demasiado comunes. Siempre usa software de código abierto, alójalo tú mismo o paga por un servicio en la nube reputable. Nunca uses un proxy gratuito; puede monitorear tu conexión, robar cookies y contener malware. Las VPN son una mejor opción, mejor aún - usa la red Tor.
 
+
 #### Proveedores DNS
 
 Sin usar un DNS seguro y centrado en privacidad, todas tus solicitudes web pueden verse en claro. Deberías configurar tus consultas DNS para ser gestionadas por un servicio que respete la privacidad y soporte DNS-over-TLS, DNS-over-HTTPS o DNSCrypt.
@@ -406,8 +409,13 @@ Sin usar un DNS seguro y centrado en privacidad, todas tus solicitudes web puede
 
 
 #### Digital Notes
-- **[Standard Notes](https://standardnotes.com/)**: es una aplicación gratuita, de código abierto y completamente encriptada. Tiene una ui simple, Sin embargo, se incluyen muchas características, gracias a la tienda Extensions, que permite: listas de tareas pendientes, hojas de cálculo, Texto rico, Markdown, editor de matemáticas, editor de código y muchos más. Puedes elegir entre varios temas (¡sí, modo oscuro!), Y cuenta con una tienda de archivos segura incorporada, etiquetas/ carpetas, búsqueda rápida y más. Notas estándar se desarrolla activamente y de código abierto. 
+
 - **[Obsidian](https://obsidian.md/)**: Una poderosa base de conocimiento que funciona en la parte superior de los archivos locales de markdown de texto simple. Tiene un fuerte comunidad y muchos complementos y temas. Generalmente que respeta la privacidad, pero no cifrado fuera de la caja, y parte del código está ofuscado o no de código abierto completamente abierto.
+- **[Notesnook](https://github.com/streetwriters/notesnook)**: Notesnook es una aplicación gratuita (como en voz) y de código abierto para tomar notas centrada en la privacidad del usuario y la facilidad de uso. Para garantizar principios de conocimiento cero, Notesnook cifra todo en su dispositivo usando XChaCha20-Poly1305 & Argon2. Existe opción gratuita y te pago.
+- - **[Standard Notes](https://standardnotes.com/)**: es una aplicación gratuita, de código abierto y completamente encriptada. Tiene una ui simple, Sin embargo, se incluyen muchas características, gracias a la tienda Extensions, que permite: listas de tareas pendientes, hojas de cálculo, Texto rico, Markdown, editor de matemáticas, editor de código y muchos más. Puedes elegir entre varios temas (¡sí, modo oscuro!), Y cuenta con una tienda de archivos segura incorporada, etiquetas/ carpetas, búsqueda rápida y más. Notas estándar se desarrolla activamente y de código abierto. 
+
+**Advertencia:** Cuidado con aplicaciones como Notas de iOS, sin usar el bloqueo de notas, se sincroniza con icloud.
+
 
 #### Almacenamiento cifrado en la nube
 
