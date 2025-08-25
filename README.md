@@ -1,11 +1,11 @@
-# Privacidad Asombrosa (v. en Español)
+# Privacidad Asombrosa (versión en Español)
 
-El archivo en inglés del cual se inspiró el presente proyecto está licenciado bajo CC0-1.0 por Alicia Sykes en el repositorio: [awesome-privacy](https://github.com/Lissy93/awesome-privacy)
 
 Se presenta el contenido del archivo YAML reformulado en formato Markdown, con descripciones, menciones notables, advertencias y ediciones del editor.
 
 **Nota**:
 El contenido se mantiene en constante actualización. Cualquier contribución es bienvenida. 
+El archivo en inglés del cual se inspiró el presente proyecto está licenciado bajo CC0-1.0 por Alicia Sykes en el repositorio: [awesome-privacy](https://github.com/Lissy93/awesome-privacy)
 
 ![Privacidad](imagenes/privacidad.png)
 
